@@ -1012,7 +1012,7 @@ topology:
     - endpoints: ["r44:Gi0-0-0-14", "r50:Gi0-0-0-44"]
     - endpoints: ["r44:Gi0-0-0-15", "r51:Gi0-0-0-44"]
     - endpoints: ["r44:Gi0-0-0-16", "r52:Gi0-0-0-44"]
-    - endpoints: ["r44:Gi0-0-0-17", "r53:Gi0-0-0-4"] 
+    - endpoints: ["r44:Gi0-0-0-17", "r53:Gi0-0-0-44"] 
     
     ## r45 (45, 46), (45, 47), 
     - endpoints: ["r45:Gi0-0-0-10", "r46:Gi0-0-0-10"]
