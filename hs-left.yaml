@@ -342,23 +342,11 @@ topology:
       mgmt-ipv4: 172.20.50.200
       startup-config: config/t00.cfg
 
-    t01:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.10.2
-      mgmt-ipv4: 172.20.50.201
-      startup-config: config/t01.cfg
-
-    t48:
+    t07:
       kind: cisco_xrd
       image: ios-xr/xrd-control-plane:7.10.2
       mgmt-ipv4: 172.20.50.248
-      startup-config: config/t48.cfg
-
-    t49:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.10.2
-      mgmt-ipv4: 172.20.50.249
-      startup-config: config/t49.cfg
+      startup-config: config/t07.cfg
 
     t00-host1:
       kind: bridge
@@ -366,22 +354,10 @@ topology:
     t00-host2:
       kind: bridge
 
-    t01-host1:
+    t07-host1:
       kind: bridge
 
-    t01-host2:
-      kind: bridge
-
-    t48-host1:
-      kind: bridge
-
-    t48-host2:
-      kind: bridge
-
-    t49-host1:
-      kind: bridge
-
-    t49-host2:
+    t07-host2:
       kind: bridge
 
   links:
@@ -405,8 +381,6 @@ topology:
     - endpoints: ["r00:Gi0-0-0-15", "r51:Gi0-0-0-0"]
     - endpoints: ["r00:Gi0-0-0-16", "r52:Gi0-0-0-0"]
     - endpoints: ["r00:Gi0-0-0-17", "r53:Gi0-0-0-0"]
-
-    - endpoints: ["r00:Gi0-0-0-18", "t00:Gi0-0-0-0"]
 
     ## r01 (1, 17), (1, 12), (1, 26), (1, 27), (1, 28), (1, 29), 
     - endpoints: ["r01:Gi0-0-0-2", "r17:Gi0-0-0-0"]
@@ -1087,48 +1061,43 @@ topology:
 ### ToRs
 
     ## t00
-    - endpoints: ["t00:Gi0-0-0-0", "r12:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-1", "r10:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-2", "r04:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-3", "r22:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-4", "r34:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-5", "r33:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-6", "r32:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-7", "t00-host1:t00-Gi0-0-0-8"]
+    - endpoints: ["t00:Gi0-0-0-0", "r01:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-1", "r02:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-2", "r03:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-3", "r06:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-4", "r07:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-5", "r08:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-6", "r09:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-7", "t00-host1:t00-Gi0-0-0-7"]
     - endpoints: ["t00:Gi0-0-0-8", "t00-host2:t00-Gi0-0-0-8"]
+    # - endpoints: ["t00:Gi0-0-0-9", "r31:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-10", "r35:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-11", "r42:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-12", "r48:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-13", "r16:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-14", "r17:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-15", "r09:Gi0-0-0-18"]
 
-    ## t01
-    - endpoints: ["t01:Gi0-0-0-0", "r03:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-1", "r10:Gi0-0-0-19"]
-    - endpoints: ["t01:Gi0-0-0-2", "r11:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-3", "r18:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-4", "r19:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-5", "r20:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-6", "r21:Gi0-0-0-18"]
-    - endpoints: ["t01:Gi0-0-0-7", "t01-host1:t01-Gi0-0-0-8"]
-    - endpoints: ["t01:Gi0-0-0-8", "t01-host2:t01-Gi0-0-0-8"]
 
-    ## t48
-    - endpoints: ["t48:Gi0-0-0-0", "r03:Gi0-0-0-19"]
-    - endpoints: ["t48:Gi0-0-0-1", "r00:Gi0-0-0-18"]
-    - endpoints: ["t48:Gi0-0-0-2", "r02:Gi0-0-0-18"]
-    - endpoints: ["t48:Gi0-0-0-3", "r09:Gi0-0-0-18"]
-    - endpoints: ["t48:Gi0-0-0-4", "r01:Gi0-0-0-18"]
-    - endpoints: ["t48:Gi0-0-0-5", "r06:Gi0-0-0-18"]
-    - endpoints: ["t48:Gi0-0-0-6", "r04:Gi0-0-0-19"]
-    - endpoints: ["t48:Gi0-0-0-7", "t48-host1:t48-Gi0-0-0-8"]
-    - endpoints: ["t48:Gi0-0-0-8", "t48-host2:t48-Gi0-0-0-8"]
+    ## t07
+    - endpoints: ["t07:Gi0-0-0-0", "r34:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-1", "r23:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-2", "r19:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-3", "r37:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-4", "r41:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-5", "r48:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-6", "r00:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-7", "t07-host1:t07-Gi0-0-0-7"]
+    - endpoints: ["t07:Gi0-0-0-8", "t07-host2:t07-Gi0-0-0-8"]
+    # - endpoints: ["t07:Gi0-0-0-9", "r11:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-10", "r23:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-11", "r18:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-12", "r28:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-13", "r30:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-14", "r33:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-15", "r09:Gi0-0-0-18"]
 
-    ## t49
-    - endpoints: ["t49:Gi0-0-0-0", "r11:Gi0-0-0-19"]
-    - endpoints: ["t49:Gi0-0-0-1", "r33:Gi0-0-0-19"]
-    - endpoints: ["t49:Gi0-0-0-2", "r31:Gi0-0-0-18"]
-    - endpoints: ["t49:Gi0-0-0-3", "r10:Gi0-0-0-20"]
-    - endpoints: ["t49:Gi0-0-0-4", "r16:Gi0-0-0-18"]
-    - endpoints: ["t49:Gi0-0-0-5", "r12:Gi0-0-0-19"]
-    - endpoints: ["t49:Gi0-0-0-6", "r07:Gi0-0-0-18"]
-    - endpoints: ["t49:Gi0-0-0-7", "t49-host1:t49-Gi0-0-0-8"]
-    - endpoints: ["t49:Gi0-0-0-8", "t49-host2:t49-Gi0-0-0-8"]
+
 
 
 
