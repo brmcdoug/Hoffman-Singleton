@@ -91,7 +91,7 @@ topology:
     r13:
       kind: cisco_xrd
       image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.103
+      mgmt-ipv4: 172.20.50.113
       startup-config: config/r13.cfg
 
     r14:
