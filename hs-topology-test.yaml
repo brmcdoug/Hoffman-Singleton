@@ -310,55 +310,6 @@ topology:
       mgmt-ipv4: 172.20.50.149
       startup-config: config/r49.cfg
 
-  ## Spine nodes
-    r50:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.150
-      startup-config: config/r50.cfg
-
-    r51:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.151
-      startup-config: config/r51.cfg
-
-    r52:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.152
-      startup-config: config/r52.cfg
-
-    r53:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.153
-      startup-config: config/r53.cfg
-
-  ## ToR nodes
-    t00:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.200
-      startup-config: config/t00.cfg
-
-    t07:
-      kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:24.1.1
-      mgmt-ipv4: 172.20.50.248
-      startup-config: config/t07.cfg
-
-    t00-host1:
-      kind: bridge
-
-    t00-host2:
-      kind: bridge
-
-    t07-host1:
-      kind: bridge
-
-    t07-host2:
-      kind: bridge
 
   links:
     ## r00 (0, 1), (0, 2), (0, 3), (0, 6), (0, 7), (0, 8), (0, 9), 
@@ -370,10 +321,10 @@ topology:
     - endpoints: ["r00:Gi0-0-0-10", "r08:Gi0-0-0-0"]
     - endpoints: ["r00:Gi0-0-0-12", "r09:Gi0-0-0-0"]
 
-    - endpoints: ["r00:Gi0-0-0-14", "r50:Gi0-0-0-0"]
-    - endpoints: ["r00:Gi0-0-0-15", "r51:Gi0-0-0-0"]
-    - endpoints: ["r00:Gi0-0-0-16", "r52:Gi0-0-0-0"]
-    - endpoints: ["r00:Gi0-0-0-17", "r53:Gi0-0-0-0"]
+    # - endpoints: ["r00:Gi0-0-0-14", "r50:Gi0-0-0-0"]
+    # - endpoints: ["r00:Gi0-0-0-15", "r51:Gi0-0-0-0"]
+    # - endpoints: ["r00:Gi0-0-0-16", "r52:Gi0-0-0-0"]
+    # - endpoints: ["r00:Gi0-0-0-17", "r53:Gi0-0-0-0"]
 
     ## r01 (1, 17), (1, 12), (1, 26), (1, 27), (1, 28), (1, 29), 
     - endpoints: ["r01:Gi0-0-0-2", "r17:Gi0-0-0-0"]
@@ -383,10 +334,10 @@ topology:
     - endpoints: ["r01:Gi0-0-0-10", "r28:Gi0-0-0-0"]
     - endpoints: ["r01:Gi0-0-0-12", "r29:Gi0-0-0-0"]
 
-    - endpoints: ["r01:Gi0-0-0-14", "r50:Gi0-0-0-1"]
-    - endpoints: ["r01:Gi0-0-0-15", "r51:Gi0-0-0-1"]
-    - endpoints: ["r01:Gi0-0-0-16", "r52:Gi0-0-0-1"]
-    - endpoints: ["r01:Gi0-0-0-17", "r53:Gi0-0-0-1"] 
+    # - endpoints: ["r01:Gi0-0-0-14", "r50:Gi0-0-0-1"]
+    # - endpoints: ["r01:Gi0-0-0-15", "r51:Gi0-0-0-1"]
+    # - endpoints: ["r01:Gi0-0-0-16", "r52:Gi0-0-0-1"]
+    # - endpoints: ["r01:Gi0-0-0-17", "r53:Gi0-0-0-1"] 
 
     ## r02 (2, 10), (2, 11), (2, 13), (2, 14), (2, 15), (2, 16), 
     - endpoints: ["r02:Gi0-0-0-2", "r10:Gi0-0-0-0"]
@@ -396,10 +347,10 @@ topology:
     - endpoints: ["r02:Gi0-0-0-10", "r15:Gi0-0-0-0"]
     - endpoints: ["r02:Gi0-0-0-12", "r16:Gi0-0-0-0"]
 
-    - endpoints: ["r02:Gi0-0-0-14", "r50:Gi0-0-0-2"]
-    - endpoints: ["r02:Gi0-0-0-15", "r51:Gi0-0-0-2"]
-    - endpoints: ["r02:Gi0-0-0-16", "r52:Gi0-0-0-2"]
-    - endpoints: ["r02:Gi0-0-0-17", "r53:Gi0-0-0-2"]
+    # - endpoints: ["r02:Gi0-0-0-14", "r50:Gi0-0-0-2"]
+    # - endpoints: ["r02:Gi0-0-0-15", "r51:Gi0-0-0-2"]
+    # - endpoints: ["r02:Gi0-0-0-16", "r52:Gi0-0-0-2"]
+    # - endpoints: ["r02:Gi0-0-0-17", "r53:Gi0-0-0-2"]
 
     ## r03 (3, 4), (3, 5), (3, 30), (3, 35), (3, 40), (3, 45),
     - endpoints: ["r03:Gi0-0-0-2", "r04:Gi0-0-0-0"]
@@ -409,10 +360,10 @@ topology:
     - endpoints: ["r03:Gi0-0-0-10", "r40:Gi0-0-0-0"]
     - endpoints: ["r03:Gi0-0-0-12", "r45:Gi0-0-0-0"]
 
-    - endpoints: ["r03:Gi0-0-0-14", "r50:Gi0-0-0-3"]
-    - endpoints: ["r03:Gi0-0-0-15", "r51:Gi0-0-0-3"]
-    - endpoints: ["r03:Gi0-0-0-16", "r52:Gi0-0-0-3"]
-    - endpoints: ["r03:Gi0-0-0-17", "r53:Gi0-0-0-3"] 
+    # - endpoints: ["r03:Gi0-0-0-14", "r50:Gi0-0-0-3"]
+    # - endpoints: ["r03:Gi0-0-0-15", "r51:Gi0-0-0-3"]
+    # - endpoints: ["r03:Gi0-0-0-16", "r52:Gi0-0-0-3"]
+    # - endpoints: ["r03:Gi0-0-0-17", "r53:Gi0-0-0-3"] 
 
     ## r04 (4, 11), (4, 17), (4, 34), (4, 39), (4, 44), (4, 49), 
     - endpoints: ["r04:Gi0-0-0-2", "r11:Gi0-0-0-2"]
@@ -422,10 +373,10 @@ topology:
     - endpoints: ["r04:Gi0-0-0-10", "r44:Gi0-0-0-0"]
     - endpoints: ["r04:Gi0-0-0-12", "r49:Gi0-0-0-0"]
 
-    - endpoints: ["r04:Gi0-0-0-14", "r50:Gi0-0-0-4"]
-    - endpoints: ["r04:Gi0-0-0-15", "r51:Gi0-0-0-4"]
-    - endpoints: ["r04:Gi0-0-0-16", "r52:Gi0-0-0-4"]
-    - endpoints: ["r04:Gi0-0-0-17", "r53:Gi0-0-0-4"]
+    # - endpoints: ["r04:Gi0-0-0-14", "r50:Gi0-0-0-4"]
+    # - endpoints: ["r04:Gi0-0-0-15", "r51:Gi0-0-0-4"]
+    # - endpoints: ["r04:Gi0-0-0-16", "r52:Gi0-0-0-4"]
+    # - endpoints: ["r04:Gi0-0-0-17", "r53:Gi0-0-0-4"]
 
     ## r05 (5, 12), (5, 10), (5, 33), (5, 38), (5, 43), (5, 48),
     - endpoints: ["r05:Gi0-0-0-2", "r12:Gi0-0-0-2"]
@@ -435,10 +386,10 @@ topology:
     - endpoints: ["r05:Gi0-0-0-10", "r43:Gi0-0-0-0"]
     - endpoints: ["r05:Gi0-0-0-12", "r48:Gi0-0-0-0"]
 
-    - endpoints: ["r05:Gi0-0-0-14", "r50:Gi0-0-0-5"]
-    - endpoints: ["r05:Gi0-0-0-15", "r51:Gi0-0-0-5"]
-    - endpoints: ["r05:Gi0-0-0-16", "r52:Gi0-0-0-5"]
-    - endpoints: ["r05:Gi0-0-0-17", "r53:Gi0-0-0-5"]
+    # - endpoints: ["r05:Gi0-0-0-14", "r50:Gi0-0-0-5"]
+    # - endpoints: ["r05:Gi0-0-0-15", "r51:Gi0-0-0-5"]
+    # - endpoints: ["r05:Gi0-0-0-16", "r52:Gi0-0-0-5"]
+    # - endpoints: ["r05:Gi0-0-0-17", "r53:Gi0-0-0-5"]
 
     ## r06 (6, 22), (6, 18), (6, 31), (6, 39), (6, 43), (6, 47)
     - endpoints: ["r06:Gi0-0-0-2", "r22:Gi0-0-0-0"]
@@ -448,10 +399,10 @@ topology:
     - endpoints: ["r06:Gi0-0-0-10", "r43:Gi0-0-0-2"]
     - endpoints: ["r06:Gi0-0-0-12", "r47:Gi0-0-0-0"]
 
-    - endpoints: ["r06:Gi0-0-0-14", "r50:Gi0-0-0-6"]
-    - endpoints: ["r06:Gi0-0-0-15", "r51:Gi0-0-0-6"]
-    - endpoints: ["r06:Gi0-0-0-16", "r52:Gi0-0-0-6"]
-    - endpoints: ["r06:Gi0-0-0-17", "r53:Gi0-0-0-6"]
+    # - endpoints: ["r06:Gi0-0-0-14", "r50:Gi0-0-0-6"]
+    # - endpoints: ["r06:Gi0-0-0-15", "r51:Gi0-0-0-6"]
+    # - endpoints: ["r06:Gi0-0-0-16", "r52:Gi0-0-0-6"]
+    # - endpoints: ["r06:Gi0-0-0-17", "r53:Gi0-0-0-6"]
 
     ## r07 (7, 34), (7, 23), (7, 19), (7, 37), (7, 41), (7, 48)
     - endpoints: ["r07:Gi0-0-0-2", "r34:Gi0-0-0-2"]
@@ -461,10 +412,10 @@ topology:
     - endpoints: ["r07:Gi0-0-0-10", "r41:Gi0-0-0-0"]
     - endpoints: ["r07:Gi0-0-0-12", "r48:Gi0-0-0-2"]
 
-    - endpoints: ["r07:Gi0-0-0-14", "r50:Gi0-0-0-7"]
-    - endpoints: ["r07:Gi0-0-0-15", "r51:Gi0-0-0-7"]
-    - endpoints: ["r07:Gi0-0-0-16", "r52:Gi0-0-0-7"]
-    - endpoints: ["r07:Gi0-0-0-17", "r53:Gi0-0-0-7"]
+    # - endpoints: ["r07:Gi0-0-0-14", "r50:Gi0-0-0-7"]
+    # - endpoints: ["r07:Gi0-0-0-15", "r51:Gi0-0-0-7"]
+    # - endpoints: ["r07:Gi0-0-0-16", "r52:Gi0-0-0-7"]
+    # - endpoints: ["r07:Gi0-0-0-17", "r53:Gi0-0-0-7"]
 
     ## r08 (8, 33), (8, 36), (8, 24), (8, 20), (8, 42), (8, 49)
     - endpoints: ["r08:Gi0-0-0-2", "r33:Gi0-0-0-2"]
@@ -474,10 +425,10 @@ topology:
     - endpoints: ["r08:Gi0-0-0-10", "r42:Gi0-0-0-0"]
     - endpoints: ["r08:Gi0-0-0-12", "r49:Gi0-0-0-2"]
 
-    - endpoints: ["r08:Gi0-0-0-14", "r50:Gi0-0-0-8"]
-    - endpoints: ["r08:Gi0-0-0-15", "r51:Gi0-0-0-8"]
-    - endpoints: ["r08:Gi0-0-0-16", "r52:Gi0-0-0-8"]
-    - endpoints: ["r08:Gi0-0-0-17", "r53:Gi0-0-0-8"]
+    # - endpoints: ["r08:Gi0-0-0-14", "r50:Gi0-0-0-8"]
+    # - endpoints: ["r08:Gi0-0-0-15", "r51:Gi0-0-0-8"]
+    # - endpoints: ["r08:Gi0-0-0-16", "r52:Gi0-0-0-8"]
+    # - endpoints: ["r08:Gi0-0-0-17", "r53:Gi0-0-0-8"]
 
     ## r09 (9, 32), (9, 38), (9, 44), (9, 25), (9, 21), (9, 46)
     - endpoints: ["r09:Gi0-0-0-2", "r32:Gi0-0-0-0"]
@@ -487,10 +438,10 @@ topology:
     - endpoints: ["r09:Gi0-0-0-10", "r21:Gi0-0-0-0"]
     - endpoints: ["r09:Gi0-0-0-12", "r46:Gi0-0-0-0"]
 
-    - endpoints: ["r09:Gi0-0-0-14", "r50:Gi0-0-0-9"]
-    - endpoints: ["r09:Gi0-0-0-15", "r51:Gi0-0-0-9"]
-    - endpoints: ["r09:Gi0-0-0-16", "r52:Gi0-0-0-9"]
-    - endpoints: ["r09:Gi0-0-0-17", "r53:Gi0-0-0-9"]
+    # - endpoints: ["r09:Gi0-0-0-14", "r50:Gi0-0-0-9"]
+    # - endpoints: ["r09:Gi0-0-0-15", "r51:Gi0-0-0-9"]
+    # - endpoints: ["r09:Gi0-0-0-16", "r52:Gi0-0-0-9"]
+    # - endpoints: ["r09:Gi0-0-0-17", "r53:Gi0-0-0-9"]
 
     ## r10 (10, 17), (10, 18), (10, 19), (10, 20), (10, 21)
     - endpoints: ["r10:Gi0-0-0-4", "r17:Gi0-0-0-4"]
@@ -499,10 +450,10 @@ topology:
     - endpoints: ["r10:Gi0-0-0-10", "r20:Gi0-0-0-2"]
     - endpoints: ["r10:Gi0-0-0-12", "r21:Gi0-0-0-2"]
 
-    - endpoints: ["r10:Gi0-0-0-14", "r50:Gi0-0-0-10"]
-    - endpoints: ["r10:Gi0-0-0-15", "r51:Gi0-0-0-10"]
-    - endpoints: ["r10:Gi0-0-0-16", "r52:Gi0-0-0-10"]
-    - endpoints: ["r10:Gi0-0-0-17", "r53:Gi0-0-0-10"]
+    # - endpoints: ["r10:Gi0-0-0-14", "r50:Gi0-0-0-10"]
+    # - endpoints: ["r10:Gi0-0-0-15", "r51:Gi0-0-0-10"]
+    # - endpoints: ["r10:Gi0-0-0-16", "r52:Gi0-0-0-10"]
+    # - endpoints: ["r10:Gi0-0-0-17", "r53:Gi0-0-0-10"]
 
     ## r11 (11, 12), (11, 32), (11, 37), (11, 42), (11, 47),
     - endpoints: ["r11:Gi0-0-0-4", "r12:Gi0-0-0-4"]
@@ -511,10 +462,10 @@ topology:
     - endpoints: ["r11:Gi0-0-0-10", "r42:Gi0-0-0-2"]
     - endpoints: ["r11:Gi0-0-0-12", "r47:Gi0-0-0-2"]
 
-    - endpoints: ["r11:Gi0-0-0-14", "r50:Gi0-0-0-11"]
-    - endpoints: ["r11:Gi0-0-0-15", "r51:Gi0-0-0-11"]
-    - endpoints: ["r11:Gi0-0-0-16", "r52:Gi0-0-0-11"]
-    - endpoints: ["r11:Gi0-0-0-17", "r53:Gi0-0-0-11"]
+    # - endpoints: ["r11:Gi0-0-0-14", "r50:Gi0-0-0-11"]
+    # - endpoints: ["r11:Gi0-0-0-15", "r51:Gi0-0-0-11"]
+    # - endpoints: ["r11:Gi0-0-0-16", "r52:Gi0-0-0-11"]
+    # - endpoints: ["r11:Gi0-0-0-17", "r53:Gi0-0-0-11"]
 
     ## r12 (12, 31), (12, 36), (12, 41), (12, 46), 
     - endpoints: ["r12:Gi0-0-0-6", "r31:Gi0-0-0-2"]
@@ -522,10 +473,10 @@ topology:
     - endpoints: ["r12:Gi0-0-0-10", "r41:Gi0-0-0-2"]
     - endpoints: ["r12:Gi0-0-0-12", "r46:Gi0-0-0-2"]
 
-    - endpoints: ["r12:Gi0-0-0-14", "r50:Gi0-0-0-12"]
-    - endpoints: ["r12:Gi0-0-0-15", "r51:Gi0-0-0-12"]
-    - endpoints: ["r12:Gi0-0-0-16", "r52:Gi0-0-0-12"]
-    - endpoints: ["r12:Gi0-0-0-17", "r53:Gi0-0-0-12"]
+    # - endpoints: ["r12:Gi0-0-0-14", "r50:Gi0-0-0-12"]
+    # - endpoints: ["r12:Gi0-0-0-15", "r51:Gi0-0-0-12"]
+    # - endpoints: ["r12:Gi0-0-0-16", "r52:Gi0-0-0-12"]
+    # - endpoints: ["r12:Gi0-0-0-17", "r53:Gi0-0-0-12"]
     
     
     ## r13 (13, 30), (13, 26), (13, 22), (13, 36), (13, 44), (13, 48),
@@ -536,10 +487,10 @@ topology:
     - endpoints: ["r13:Gi0-0-0-10", "r44:Gi0-0-0-4"]
     - endpoints: ["r13:Gi0-0-0-12", "r48:Gi0-0-0-4"]
 
-    - endpoints: ["r13:Gi0-0-0-14", "r50:Gi0-0-0-13"]
-    - endpoints: ["r13:Gi0-0-0-15", "r51:Gi0-0-0-13"]
-    - endpoints: ["r13:Gi0-0-0-16", "r52:Gi0-0-0-13"]
-    - endpoints: ["r13:Gi0-0-0-17", "r53:Gi0-0-0-13"]
+    # - endpoints: ["r13:Gi0-0-0-14", "r50:Gi0-0-0-13"]
+    # - endpoints: ["r13:Gi0-0-0-15", "r51:Gi0-0-0-13"]
+    # - endpoints: ["r13:Gi0-0-0-16", "r52:Gi0-0-0-13"]
+    # - endpoints: ["r13:Gi0-0-0-17", "r53:Gi0-0-0-13"]
 
     ## r14 (14, 31), (14, 27), (14, 23), (14, 38), (14, 40), (14, 49), 
     - endpoints: ["r14:Gi0-0-0-2", "r31:Gi0-0-0-4"]
@@ -549,10 +500,10 @@ topology:
     - endpoints: ["r14:Gi0-0-0-10", "r40:Gi0-0-0-2"]
     - endpoints: ["r14:Gi0-0-0-12", "r49:Gi0-0-0-4"]
 
-    - endpoints: ["r14:Gi0-0-0-14", "r50:Gi0-0-0-14"]
-    - endpoints: ["r14:Gi0-0-0-15", "r51:Gi0-0-0-14"]
-    - endpoints: ["r14:Gi0-0-0-16", "r52:Gi0-0-0-14"]
-    - endpoints: ["r14:Gi0-0-0-17", "r53:Gi0-0-0-14"]    
+    # - endpoints: ["r14:Gi0-0-0-14", "r50:Gi0-0-0-14"]
+    # - endpoints: ["r14:Gi0-0-0-15", "r51:Gi0-0-0-14"]
+    # - endpoints: ["r14:Gi0-0-0-16", "r52:Gi0-0-0-14"]
+    # - endpoints: ["r14:Gi0-0-0-17", "r53:Gi0-0-0-14"]    
     
     ## r15 (15, 34), (15, 35), (15, 28), (15, 24), (15, 43), (15, 46),
     - endpoints: ["r15:Gi0-0-0-2", "r34:Gi0-0-0-4"]
@@ -562,10 +513,10 @@ topology:
     - endpoints: ["r15:Gi0-0-0-10", "r43:Gi0-0-0-4"]
     - endpoints: ["r15:Gi0-0-0-12", "r46:Gi0-0-0-4"]
 
-    - endpoints: ["r15:Gi0-0-0-14", "r50:Gi0-0-0-15"]
-    - endpoints: ["r15:Gi0-0-0-15", "r51:Gi0-0-0-15"]
-    - endpoints: ["r15:Gi0-0-0-16", "r52:Gi0-0-0-15"]
-    - endpoints: ["r15:Gi0-0-0-17", "r53:Gi0-0-0-15"]
+    # - endpoints: ["r15:Gi0-0-0-14", "r50:Gi0-0-0-15"]
+    # - endpoints: ["r15:Gi0-0-0-15", "r51:Gi0-0-0-15"]
+    # - endpoints: ["r15:Gi0-0-0-16", "r52:Gi0-0-0-15"]
+    # - endpoints: ["r15:Gi0-0-0-17", "r53:Gi0-0-0-15"]
 
     ## r16 (16, 33), (16, 39), (16, 41), (16, 45), (16, 29), (16, 25), 
     - endpoints: ["r16:Gi0-0-0-2", "r33:Gi0-0-0-4"]
@@ -575,10 +526,10 @@ topology:
     - endpoints: ["r16:Gi0-0-0-10", "r29:Gi0-0-0-2"]
     - endpoints: ["r16:Gi0-0-0-12", "r25:Gi0-0-0-2"]
 
-    - endpoints: ["r16:Gi0-0-0-14", "r50:Gi0-0-0-16"]
-    - endpoints: ["r16:Gi0-0-0-15", "r51:Gi0-0-0-16"]
-    - endpoints: ["r16:Gi0-0-0-16", "r52:Gi0-0-0-16"]
-    - endpoints: ["r16:Gi0-0-0-17", "r53:Gi0-0-0-16"]    
+    # - endpoints: ["r16:Gi0-0-0-14", "r50:Gi0-0-0-16"]
+    # - endpoints: ["r16:Gi0-0-0-15", "r51:Gi0-0-0-16"]
+    # - endpoints: ["r16:Gi0-0-0-16", "r52:Gi0-0-0-16"]
+    # - endpoints: ["r16:Gi0-0-0-17", "r53:Gi0-0-0-16"]    
     
     ## r17 (17, 22), (17, 23), (17, 24), (17, 25),
     - endpoints: ["r17:Gi0-0-0-6", "r22:Gi0-0-0-4"]
@@ -586,10 +537,10 @@ topology:
     - endpoints: ["r17:Gi0-0-0-10", "r24:Gi0-0-0-4"]
     - endpoints: ["r17:Gi0-0-0-12", "r25:Gi0-0-0-4"]
 
-    - endpoints: ["r17:Gi0-0-0-14", "r50:Gi0-0-0-17"]
-    - endpoints: ["r17:Gi0-0-0-15", "r51:Gi0-0-0-17"]
-    - endpoints: ["r17:Gi0-0-0-16", "r52:Gi0-0-0-17"]
-    - endpoints: ["r17:Gi0-0-0-17", "r53:Gi0-0-0-17"] 
+    # - endpoints: ["r17:Gi0-0-0-14", "r50:Gi0-0-0-17"]
+    # - endpoints: ["r17:Gi0-0-0-15", "r51:Gi0-0-0-17"]
+    # - endpoints: ["r17:Gi0-0-0-16", "r52:Gi0-0-0-17"]
+    # - endpoints: ["r17:Gi0-0-0-17", "r53:Gi0-0-0-17"] 
 
     ## r18 (18, 32), (18, 26), (18, 35), (18, 41), (18, 49), 
     - endpoints: ["r18:Gi0-0-0-4", "r32:Gi0-0-0-4"]
@@ -598,10 +549,10 @@ topology:
     - endpoints: ["r18:Gi0-0-0-10", "r41:Gi0-0-0-6"]
     - endpoints: ["r18:Gi0-0-0-12", "r49:Gi0-0-0-6"]
 
-    - endpoints: ["r18:Gi0-0-0-14", "r50:Gi0-0-0-18"]
-    - endpoints: ["r18:Gi0-0-0-15", "r51:Gi0-0-0-18"]
-    - endpoints: ["r18:Gi0-0-0-16", "r52:Gi0-0-0-18"]
-    - endpoints: ["r18:Gi0-0-0-17", "r53:Gi0-0-0-18"] 
+    # - endpoints: ["r18:Gi0-0-0-14", "r50:Gi0-0-0-18"]
+    # - endpoints: ["r18:Gi0-0-0-15", "r51:Gi0-0-0-18"]
+    # - endpoints: ["r18:Gi0-0-0-16", "r52:Gi0-0-0-18"]
+    # - endpoints: ["r18:Gi0-0-0-17", "r53:Gi0-0-0-18"] 
     
     ## r19 (19, 30), (19, 27), (19, 39), (19, 42), (19, 46),
     - endpoints: ["r19:Gi0-0-0-4", "r30:Gi0-0-0-4"]
@@ -610,10 +561,10 @@ topology:
     - endpoints: ["r19:Gi0-0-0-10", "r42:Gi0-0-0-4"]
     - endpoints: ["r19:Gi0-0-0-12", "r46:Gi0-0-0-6"]
 
-    - endpoints: ["r19:Gi0-0-0-14", "r50:Gi0-0-0-19"]
-    - endpoints: ["r19:Gi0-0-0-15", "r51:Gi0-0-0-19"]
-    - endpoints: ["r19:Gi0-0-0-16", "r52:Gi0-0-0-19"]
-    - endpoints: ["r19:Gi0-0-0-17", "r53:Gi0-0-0-19"] 
+    # - endpoints: ["r19:Gi0-0-0-14", "r50:Gi0-0-0-19"]
+    # - endpoints: ["r19:Gi0-0-0-15", "r51:Gi0-0-0-19"]
+    # - endpoints: ["r19:Gi0-0-0-16", "r52:Gi0-0-0-19"]
+    # - endpoints: ["r19:Gi0-0-0-17", "r53:Gi0-0-0-19"] 
 
     ## r20 (20, 31), (20, 37), (20, 28), (20, 44), (20, 45),
     - endpoints: ["r20:Gi0-0-0-4", "r31:Gi0-0-0-6"]
@@ -622,10 +573,10 @@ topology:
     - endpoints: ["r20:Gi0-0-0-10", "r44:Gi0-0-0-6"]
     - endpoints: ["r20:Gi0-0-0-12", "r45:Gi0-0-0-4"]
 
-    - endpoints: ["r20:Gi0-0-0-14", "r50:Gi0-0-0-20"]
-    - endpoints: ["r20:Gi0-0-0-15", "r51:Gi0-0-0-20"]
-    - endpoints: ["r20:Gi0-0-0-16", "r52:Gi0-0-0-20"]
-    - endpoints: ["r20:Gi0-0-0-17", "r53:Gi0-0-0-20"]    
+    # - endpoints: ["r20:Gi0-0-0-14", "r50:Gi0-0-0-20"]
+    # - endpoints: ["r20:Gi0-0-0-15", "r51:Gi0-0-0-20"]
+    # - endpoints: ["r20:Gi0-0-0-16", "r52:Gi0-0-0-20"]
+    # - endpoints: ["r20:Gi0-0-0-17", "r53:Gi0-0-0-20"]    
     
     ## r21 (21, 34), (21, 36), (21, 40), (21, 47), (21, 29),
     - endpoints: ["r21:Gi0-0-0-4", "r34:Gi0-0-0-6"]
@@ -634,10 +585,10 @@ topology:
     - endpoints: ["r21:Gi0-0-0-10", "r47:Gi0-0-0-4"]
     - endpoints: ["r21:Gi0-0-0-12", "r29:Gi0-0-0-4"]
 
-    - endpoints: ["r21:Gi0-0-0-14", "r50:Gi0-0-0-21"]
-    - endpoints: ["r21:Gi0-0-0-15", "r51:Gi0-0-0-21"]
-    - endpoints: ["r21:Gi0-0-0-16", "r52:Gi0-0-0-21"]
-    - endpoints: ["r21:Gi0-0-0-17", "r53:Gi0-0-0-21"]
+    # - endpoints: ["r21:Gi0-0-0-14", "r50:Gi0-0-0-21"]
+    # - endpoints: ["r21:Gi0-0-0-15", "r51:Gi0-0-0-21"]
+    # - endpoints: ["r21:Gi0-0-0-16", "r52:Gi0-0-0-21"]
+    # - endpoints: ["r21:Gi0-0-0-17", "r53:Gi0-0-0-21"]
 
     ## r22 (22, 33), (22, 37), (22, 40), (22, 46), 
     - endpoints: ["r22:Gi0-0-0-6", "r33:Gi0-0-0-6"]
@@ -645,10 +596,10 @@ topology:
     - endpoints: ["r22:Gi0-0-0-10", "r40:Gi0-0-0-6"]
     - endpoints: ["r22:Gi0-0-0-12", "r46:Gi0-0-0-8"]
 
-    - endpoints: ["r22:Gi0-0-0-14", "r50:Gi0-0-0-22"]
-    - endpoints: ["r22:Gi0-0-0-15", "r51:Gi0-0-0-22"]
-    - endpoints: ["r22:Gi0-0-0-16", "r52:Gi0-0-0-22"]
-    - endpoints: ["r22:Gi0-0-0-17", "r53:Gi0-0-0-22"]    
+    # - endpoints: ["r22:Gi0-0-0-14", "r50:Gi0-0-0-22"]
+    # - endpoints: ["r22:Gi0-0-0-15", "r51:Gi0-0-0-22"]
+    # - endpoints: ["r22:Gi0-0-0-16", "r52:Gi0-0-0-22"]
+    # - endpoints: ["r22:Gi0-0-0-17", "r53:Gi0-0-0-22"]    
     
     ## r23 (23, 32), (23, 36), (23, 43), (23, 45),
     - endpoints: ["r23:Gi0-0-0-6", "r32:Gi0-0-0-6"]
@@ -656,10 +607,10 @@ topology:
     - endpoints: ["r23:Gi0-0-0-10", "r43:Gi0-0-0-6"]
     - endpoints: ["r23:Gi0-0-0-12", "r45:Gi0-0-0-6"]
 
-    - endpoints: ["r23:Gi0-0-0-14", "r50:Gi0-0-0-23"]
-    - endpoints: ["r23:Gi0-0-0-15", "r51:Gi0-0-0-23"]
-    - endpoints: ["r23:Gi0-0-0-16", "r52:Gi0-0-0-23"]
-    - endpoints: ["r23:Gi0-0-0-17", "r53:Gi0-0-0-23"] 
+    # - endpoints: ["r23:Gi0-0-0-14", "r50:Gi0-0-0-23"]
+    # - endpoints: ["r23:Gi0-0-0-15", "r51:Gi0-0-0-23"]
+    # - endpoints: ["r23:Gi0-0-0-16", "r52:Gi0-0-0-23"]
+    # - endpoints: ["r23:Gi0-0-0-17", "r53:Gi0-0-0-23"] 
 
     ## r24 (24, 30), (24, 38), (24, 41), (24, 47), 
     - endpoints: ["r24:Gi0-0-0-6", "r30:Gi0-0-0-6"]
@@ -667,10 +618,10 @@ topology:
     - endpoints: ["r24:Gi0-0-0-10", "r41:Gi0-0-0-8"]
     - endpoints: ["r24:Gi0-0-0-12", "r47:Gi0-0-0-6"]
 
-    - endpoints: ["r24:Gi0-0-0-14", "r50:Gi0-0-0-24"]
-    - endpoints: ["r24:Gi0-0-0-15", "r51:Gi0-0-0-24"]
-    - endpoints: ["r24:Gi0-0-0-16", "r52:Gi0-0-0-24"]
-    - endpoints: ["r24:Gi0-0-0-17", "r53:Gi0-0-0-24"]    
+    # - endpoints: ["r24:Gi0-0-0-14", "r50:Gi0-0-0-24"]
+    # - endpoints: ["r24:Gi0-0-0-15", "r51:Gi0-0-0-24"]
+    # - endpoints: ["r24:Gi0-0-0-16", "r52:Gi0-0-0-24"]
+    # - endpoints: ["r24:Gi0-0-0-17", "r53:Gi0-0-0-24"]    
     
     ## r25 (25, 31), (25, 35), (25, 42), (25, 48),
     - endpoints: ["r25:Gi0-0-0-6", "r31:Gi0-0-0-8"]
@@ -678,10 +629,10 @@ topology:
     - endpoints: ["r25:Gi0-0-0-10", "r42:Gi0-0-0-6"]
     - endpoints: ["r25:Gi0-0-0-12", "r48:Gi0-0-0-6"]
 
-    - endpoints: ["r25:Gi0-0-0-14", "r50:Gi0-0-0-25"]
-    - endpoints: ["r25:Gi0-0-0-15", "r51:Gi0-0-0-25"]
-    - endpoints: ["r25:Gi0-0-0-16", "r52:Gi0-0-0-25"]
-    - endpoints: ["r25:Gi0-0-0-17", "r53:Gi0-0-0-25"]
+    # - endpoints: ["r25:Gi0-0-0-14", "r50:Gi0-0-0-25"]
+    # - endpoints: ["r25:Gi0-0-0-15", "r51:Gi0-0-0-25"]
+    # - endpoints: ["r25:Gi0-0-0-16", "r52:Gi0-0-0-25"]
+    # - endpoints: ["r25:Gi0-0-0-17", "r53:Gi0-0-0-25"]
 
     ## r26 (26, 34), (26, 38), (26, 42), (26, 45), 
     - endpoints: ["r26:Gi0-0-0-6", "r34:Gi0-0-0-8"]
@@ -689,10 +640,10 @@ topology:
     - endpoints: ["r26:Gi0-0-0-10", "r42:Gi0-0-0-8"]
     - endpoints: ["r26:Gi0-0-0-12", "r45:Gi0-0-0-8"]
 
-    - endpoints: ["r26:Gi0-0-0-14", "r50:Gi0-0-0-26"]
-    - endpoints: ["r26:Gi0-0-0-15", "r51:Gi0-0-0-26"]
-    - endpoints: ["r26:Gi0-0-0-16", "r52:Gi0-0-0-26"]
-    - endpoints: ["r26:Gi0-0-0-17", "r53:Gi0-0-0-26"]    
+    # - endpoints: ["r26:Gi0-0-0-14", "r50:Gi0-0-0-26"]
+    # - endpoints: ["r26:Gi0-0-0-15", "r51:Gi0-0-0-26"]
+    # - endpoints: ["r26:Gi0-0-0-16", "r52:Gi0-0-0-26"]
+    # - endpoints: ["r26:Gi0-0-0-17", "r53:Gi0-0-0-26"]    
     
     ## r27 (27, 33), (27, 35), (27, 44), (27, 47),
     - endpoints: ["r27:Gi0-0-0-6", "r33:Gi0-0-0-8"]
@@ -700,10 +651,10 @@ topology:
     - endpoints: ["r27:Gi0-0-0-10", "r44:Gi0-0-0-8"]
     - endpoints: ["r27:Gi0-0-0-12", "r47:Gi0-0-0-8"]
 
-    - endpoints: ["r27:Gi0-0-0-14", "r50:Gi0-0-0-27"]
-    - endpoints: ["r27:Gi0-0-0-15", "r51:Gi0-0-0-27"]
-    - endpoints: ["r27:Gi0-0-0-16", "r52:Gi0-0-0-27"]
-    - endpoints: ["r27:Gi0-0-0-17", "r53:Gi0-0-0-27"] 
+    # - endpoints: ["r27:Gi0-0-0-14", "r50:Gi0-0-0-27"]
+    # - endpoints: ["r27:Gi0-0-0-15", "r51:Gi0-0-0-27"]
+    # - endpoints: ["r27:Gi0-0-0-16", "r52:Gi0-0-0-27"]
+    # - endpoints: ["r27:Gi0-0-0-17", "r53:Gi0-0-0-27"] 
 
     ## r28 (28, 32), (28, 39), (28, 40), (28, 48), 
     - endpoints: ["r28:Gi0-0-0-6", "r32:Gi0-0-0-8"]
@@ -711,10 +662,10 @@ topology:
     - endpoints: ["r28:Gi0-0-0-10", "r40:Gi0-0-0-8"]
     - endpoints: ["r28:Gi0-0-0-12", "r48:Gi0-0-0-8"]
 
-    - endpoints: ["r28:Gi0-0-0-14", "r50:Gi0-0-0-28"]
-    - endpoints: ["r28:Gi0-0-0-15", "r51:Gi0-0-0-28"]
-    - endpoints: ["r28:Gi0-0-0-16", "r52:Gi0-0-0-28"]
-    - endpoints: ["r28:Gi0-0-0-17", "r53:Gi0-0-0-28"]
+    # - endpoints: ["r28:Gi0-0-0-14", "r50:Gi0-0-0-28"]
+    # - endpoints: ["r28:Gi0-0-0-15", "r51:Gi0-0-0-28"]
+    # - endpoints: ["r28:Gi0-0-0-16", "r52:Gi0-0-0-28"]
+    # - endpoints: ["r28:Gi0-0-0-17", "r53:Gi0-0-0-28"]
     
     ## r29 (29, 30), (29, 37), (29, 43), (29, 49),
     - endpoints: ["r29:Gi0-0-0-6", "r30:Gi0-0-0-8"]
@@ -722,207 +673,166 @@ topology:
     - endpoints: ["r29:Gi0-0-0-10", "r43:Gi0-0-0-8"]
     - endpoints: ["r29:Gi0-0-0-12", "r49:Gi0-0-0-8"]
 
-    - endpoints: ["r29:Gi0-0-0-14", "r50:Gi0-0-0-29"]
-    - endpoints: ["r29:Gi0-0-0-15", "r51:Gi0-0-0-29"]
-    - endpoints: ["r29:Gi0-0-0-16", "r52:Gi0-0-0-29"]
-    - endpoints: ["r29:Gi0-0-0-17", "r53:Gi0-0-0-29"]
+    # - endpoints: ["r29:Gi0-0-0-14", "r50:Gi0-0-0-29"]
+    # - endpoints: ["r29:Gi0-0-0-15", "r51:Gi0-0-0-29"]
+    # - endpoints: ["r29:Gi0-0-0-16", "r52:Gi0-0-0-29"]
+    # - endpoints: ["r29:Gi0-0-0-17", "r53:Gi0-0-0-29"]
 
     ## r30 (30, 31), (30, 32), 
     - endpoints: ["r30:Gi0-0-0-10", "r31:Gi0-0-0-10"]
     - endpoints: ["r30:Gi0-0-0-12", "r32:Gi0-0-0-10"]
 
-    - endpoints: ["r30:Gi0-0-0-14", "r50:Gi0-0-0-30"]
-    - endpoints: ["r30:Gi0-0-0-15", "r51:Gi0-0-0-30"]
-    - endpoints: ["r30:Gi0-0-0-16", "r52:Gi0-0-0-30"]
-    - endpoints: ["r30:Gi0-0-0-17", "r53:Gi0-0-0-30"]
+    # - endpoints: ["r30:Gi0-0-0-14", "r50:Gi0-0-0-30"]
+    # - endpoints: ["r30:Gi0-0-0-15", "r51:Gi0-0-0-30"]
+    # - endpoints: ["r30:Gi0-0-0-16", "r52:Gi0-0-0-30"]
+    # - endpoints: ["r30:Gi0-0-0-17", "r53:Gi0-0-0-30"]
     
     ## r31 (31, 34), 
     - endpoints: ["r31:Gi0-0-0-12", "r34:Gi0-0-0-10"]
 
-    - endpoints: ["r31:Gi0-0-0-14", "r50:Gi0-0-0-31"]
-    - endpoints: ["r31:Gi0-0-0-15", "r51:Gi0-0-0-31"]
-    - endpoints: ["r31:Gi0-0-0-16", "r52:Gi0-0-0-31"]
-    - endpoints: ["r31:Gi0-0-0-17", "r53:Gi0-0-0-31"]
+    # - endpoints: ["r31:Gi0-0-0-14", "r50:Gi0-0-0-31"]
+    # - endpoints: ["r31:Gi0-0-0-15", "r51:Gi0-0-0-31"]
+    # - endpoints: ["r31:Gi0-0-0-16", "r52:Gi0-0-0-31"]
+    # - endpoints: ["r31:Gi0-0-0-17", "r53:Gi0-0-0-31"]
     
     ## r32 (32, 33), 
     - endpoints: ["r32:Gi0-0-0-12", "r33:Gi0-0-0-10"]
 
-    - endpoints: ["r32:Gi0-0-0-14", "r50:Gi0-0-0-32"]
-    - endpoints: ["r32:Gi0-0-0-15", "r51:Gi0-0-0-32"]
-    - endpoints: ["r32:Gi0-0-0-16", "r52:Gi0-0-0-32"]
-    - endpoints: ["r32:Gi0-0-0-17", "r53:Gi0-0-0-32"]
+    # - endpoints: ["r32:Gi0-0-0-14", "r50:Gi0-0-0-32"]
+    # - endpoints: ["r32:Gi0-0-0-15", "r51:Gi0-0-0-32"]
+    # - endpoints: ["r32:Gi0-0-0-16", "r52:Gi0-0-0-32"]
+    # - endpoints: ["r32:Gi0-0-0-17", "r53:Gi0-0-0-32"]
     
     ## r33 (33, 34), 
     - endpoints: ["r33:Gi0-0-0-12", "r34:Gi0-0-0-12"]
 
-    - endpoints: ["r33:Gi0-0-0-14", "r50:Gi0-0-0-33"]
-    - endpoints: ["r33:Gi0-0-0-15", "r51:Gi0-0-0-33"]
-    - endpoints: ["r33:Gi0-0-0-16", "r52:Gi0-0-0-33"]
-    - endpoints: ["r33:Gi0-0-0-17", "r53:Gi0-0-0-33"]
+    # - endpoints: ["r33:Gi0-0-0-14", "r50:Gi0-0-0-33"]
+    # - endpoints: ["r33:Gi0-0-0-15", "r51:Gi0-0-0-33"]
+    # - endpoints: ["r33:Gi0-0-0-16", "r52:Gi0-0-0-33"]
+    # - endpoints: ["r33:Gi0-0-0-17", "r53:Gi0-0-0-33"]
 
     ## r34
-    - endpoints: ["r34:Gi0-0-0-14", "r50:Gi0-0-0-34"]
-    - endpoints: ["r34:Gi0-0-0-15", "r51:Gi0-0-0-34"]
-    - endpoints: ["r34:Gi0-0-0-16", "r52:Gi0-0-0-34"]
-    - endpoints: ["r34:Gi0-0-0-17", "r53:Gi0-0-0-34"]
+    # - endpoints: ["r34:Gi0-0-0-14", "r50:Gi0-0-0-34"]
+    # - endpoints: ["r34:Gi0-0-0-15", "r51:Gi0-0-0-34"]
+    # - endpoints: ["r34:Gi0-0-0-16", "r52:Gi0-0-0-34"]
+    # - endpoints: ["r34:Gi0-0-0-17", "r53:Gi0-0-0-34"]
 
     ## r35 (35, 36), (35, 37), 
     - endpoints: ["r35:Gi0-0-0-10", "r36:Gi0-0-0-10"]
     - endpoints: ["r35:Gi0-0-0-12", "r37:Gi0-0-0-10"]
 
-    - endpoints: ["r35:Gi0-0-0-14", "r50:Gi0-0-0-35"]
-    - endpoints: ["r35:Gi0-0-0-15", "r51:Gi0-0-0-35"]
-    - endpoints: ["r35:Gi0-0-0-16", "r52:Gi0-0-0-35"]
-    - endpoints: ["r35:Gi0-0-0-17", "r53:Gi0-0-0-35"]
+    # - endpoints: ["r35:Gi0-0-0-14", "r50:Gi0-0-0-35"]
+    # - endpoints: ["r35:Gi0-0-0-15", "r51:Gi0-0-0-35"]
+    # - endpoints: ["r35:Gi0-0-0-16", "r52:Gi0-0-0-35"]
+    # - endpoints: ["r35:Gi0-0-0-17", "r53:Gi0-0-0-35"]
     
     ## 36 (36, 39), 
     - endpoints: ["r36:Gi0-0-0-12", "r39:Gi0-0-0-10"]
 
-    - endpoints: ["r36:Gi0-0-0-14", "r50:Gi0-0-0-36"]
-    - endpoints: ["r36:Gi0-0-0-15", "r51:Gi0-0-0-36"]
-    - endpoints: ["r36:Gi0-0-0-16", "r52:Gi0-0-0-36"]
-    - endpoints: ["r36:Gi0-0-0-17", "r53:Gi0-0-0-36"]
+    # - endpoints: ["r36:Gi0-0-0-14", "r50:Gi0-0-0-36"]
+    # - endpoints: ["r36:Gi0-0-0-15", "r51:Gi0-0-0-36"]
+    # - endpoints: ["r36:Gi0-0-0-16", "r52:Gi0-0-0-36"]
+    # - endpoints: ["r36:Gi0-0-0-17", "r53:Gi0-0-0-36"]
     
     ## r37 (37, 38), 
     - endpoints: ["r37:Gi0-0-0-12", "r38:Gi0-0-0-10"]
 
-    - endpoints: ["r37:Gi0-0-0-14", "r50:Gi0-0-0-37"]
-    - endpoints: ["r37:Gi0-0-0-15", "r51:Gi0-0-0-37"]
-    - endpoints: ["r37:Gi0-0-0-16", "r52:Gi0-0-0-37"]
-    - endpoints: ["r37:Gi0-0-0-17", "r53:Gi0-0-0-37"]
+    # - endpoints: ["r37:Gi0-0-0-14", "r50:Gi0-0-0-37"]
+    # - endpoints: ["r37:Gi0-0-0-15", "r51:Gi0-0-0-37"]
+    # - endpoints: ["r37:Gi0-0-0-16", "r52:Gi0-0-0-37"]
+    # - endpoints: ["r37:Gi0-0-0-17", "r53:Gi0-0-0-37"]
     
     ## r38 (38, 39),
     - endpoints: ["r38:Gi0-0-0-12", "r39:Gi0-0-0-12"]
 
-    - endpoints: ["r38:Gi0-0-0-14", "r50:Gi0-0-0-38"]
-    - endpoints: ["r38:Gi0-0-0-15", "r51:Gi0-0-0-38"]
-    - endpoints: ["r38:Gi0-0-0-16", "r52:Gi0-0-0-38"]
-    - endpoints: ["r38:Gi0-0-0-17", "r53:Gi0-0-0-38"]
+    # - endpoints: ["r38:Gi0-0-0-14", "r50:Gi0-0-0-38"]
+    # - endpoints: ["r38:Gi0-0-0-15", "r51:Gi0-0-0-38"]
+    # - endpoints: ["r38:Gi0-0-0-16", "r52:Gi0-0-0-38"]
+    # - endpoints: ["r38:Gi0-0-0-17", "r53:Gi0-0-0-38"]
 
     ## r39
-    - endpoints: ["r39:Gi0-0-0-14", "r50:Gi0-0-0-39"]
-    - endpoints: ["r39:Gi0-0-0-15", "r51:Gi0-0-0-39"]
-    - endpoints: ["r39:Gi0-0-0-16", "r52:Gi0-0-0-39"]
-    - endpoints: ["r39:Gi0-0-0-17", "r53:Gi0-0-0-39"]
+    # - endpoints: ["r39:Gi0-0-0-14", "r50:Gi0-0-0-39"]
+    # - endpoints: ["r39:Gi0-0-0-15", "r51:Gi0-0-0-39"]
+    # - endpoints: ["r39:Gi0-0-0-16", "r52:Gi0-0-0-39"]
+    # - endpoints: ["r39:Gi0-0-0-17", "r53:Gi0-0-0-39"]
 
     ## r40 (40, 41), (40, 42), 
     - endpoints: ["r40:Gi0-0-0-10", "r41:Gi0-0-0-10"]
     - endpoints: ["r40:Gi0-0-0-12", "r42:Gi0-0-0-10"]
 
-    - endpoints: ["r40:Gi0-0-0-14", "r50:Gi0-0-0-40"]
-    - endpoints: ["r40:Gi0-0-0-15", "r51:Gi0-0-0-40"]
-    - endpoints: ["r40:Gi0-0-0-16", "r52:Gi0-0-0-40"]
-    - endpoints: ["r40:Gi0-0-0-17", "r53:Gi0-0-0-40"]
+    # - endpoints: ["r40:Gi0-0-0-14", "r50:Gi0-0-0-40"]
+    # - endpoints: ["r40:Gi0-0-0-15", "r51:Gi0-0-0-40"]
+    # - endpoints: ["r40:Gi0-0-0-16", "r52:Gi0-0-0-40"]
+    # - endpoints: ["r40:Gi0-0-0-17", "r53:Gi0-0-0-40"]
     
     ## r41 (41, 44), 
     - endpoints: ["r41:Gi0-0-0-12", "r44:Gi0-0-0-10"]
 
-    - endpoints: ["r41:Gi0-0-0-14", "r50:Gi0-0-0-41"]
-    - endpoints: ["r41:Gi0-0-0-15", "r51:Gi0-0-0-41"]
-    - endpoints: ["r41:Gi0-0-0-16", "r52:Gi0-0-0-41"]
-    - endpoints: ["r41:Gi0-0-0-17", "r53:Gi0-0-0-41"]
+    # - endpoints: ["r41:Gi0-0-0-14", "r50:Gi0-0-0-41"]
+    # - endpoints: ["r41:Gi0-0-0-15", "r51:Gi0-0-0-41"]
+    # - endpoints: ["r41:Gi0-0-0-16", "r52:Gi0-0-0-41"]
+    # - endpoints: ["r41:Gi0-0-0-17", "r53:Gi0-0-0-41"]
     
     ## r42 (42, 43), 
     - endpoints: ["r42:Gi0-0-0-12", "r43:Gi0-0-0-10"]
 
-    - endpoints: ["r42:Gi0-0-0-14", "r50:Gi0-0-0-42"]
-    - endpoints: ["r42:Gi0-0-0-15", "r51:Gi0-0-0-42"]
-    - endpoints: ["r42:Gi0-0-0-16", "r52:Gi0-0-0-42"]
-    - endpoints: ["r42:Gi0-0-0-17", "r53:Gi0-0-0-42"]
+    # - endpoints: ["r42:Gi0-0-0-14", "r50:Gi0-0-0-42"]
+    # - endpoints: ["r42:Gi0-0-0-15", "r51:Gi0-0-0-42"]
+    # - endpoints: ["r42:Gi0-0-0-16", "r52:Gi0-0-0-42"]
+    # - endpoints: ["r42:Gi0-0-0-17", "r53:Gi0-0-0-42"]
     
     ## r43 (43, 44), 
     - endpoints: ["r43:Gi0-0-0-12", "r44:Gi0-0-0-12"]
 
-    - endpoints: ["r43:Gi0-0-0-14", "r50:Gi0-0-0-43"]
-    - endpoints: ["r43:Gi0-0-0-15", "r51:Gi0-0-0-43"]
-    - endpoints: ["r43:Gi0-0-0-16", "r52:Gi0-0-0-43"]
-    - endpoints: ["r43:Gi0-0-0-17", "r53:Gi0-0-0-43"]  
+    # - endpoints: ["r43:Gi0-0-0-14", "r50:Gi0-0-0-43"]
+    # - endpoints: ["r43:Gi0-0-0-15", "r51:Gi0-0-0-43"]
+    # - endpoints: ["r43:Gi0-0-0-16", "r52:Gi0-0-0-43"]
+    # - endpoints: ["r43:Gi0-0-0-17", "r53:Gi0-0-0-43"]  
     
     ## r44
-    - endpoints: ["r44:Gi0-0-0-14", "r50:Gi0-0-0-44"]
-    - endpoints: ["r44:Gi0-0-0-15", "r51:Gi0-0-0-44"]
-    - endpoints: ["r44:Gi0-0-0-16", "r52:Gi0-0-0-44"]
-    - endpoints: ["r44:Gi0-0-0-17", "r53:Gi0-0-0-44"] 
+    # - endpoints: ["r44:Gi0-0-0-14", "r50:Gi0-0-0-44"]
+    # - endpoints: ["r44:Gi0-0-0-15", "r51:Gi0-0-0-44"]
+    # - endpoints: ["r44:Gi0-0-0-16", "r52:Gi0-0-0-44"]
+    # - endpoints: ["r44:Gi0-0-0-17", "r53:Gi0-0-0-44"] 
     
     ## r45 (45, 46), (45, 47), 
     - endpoints: ["r45:Gi0-0-0-10", "r46:Gi0-0-0-10"]
     - endpoints: ["r45:Gi0-0-0-12", "r47:Gi0-0-0-10"]
 
-    - endpoints: ["r45:Gi0-0-0-14", "r50:Gi0-0-0-45"]
-    - endpoints: ["r45:Gi0-0-0-15", "r51:Gi0-0-0-45"]
-    - endpoints: ["r45:Gi0-0-0-16", "r52:Gi0-0-0-45"]
-    - endpoints: ["r45:Gi0-0-0-17", "r53:Gi0-0-0-45"]
+    # - endpoints: ["r45:Gi0-0-0-14", "r50:Gi0-0-0-45"]
+    # - endpoints: ["r45:Gi0-0-0-15", "r51:Gi0-0-0-45"]
+    # - endpoints: ["r45:Gi0-0-0-16", "r52:Gi0-0-0-45"]
+    # - endpoints: ["r45:Gi0-0-0-17", "r53:Gi0-0-0-45"]
     
     ## r46 (46, 49), 
     - endpoints: ["r46:Gi0-0-0-12", "r49:Gi0-0-0-10"]
 
-    - endpoints: ["r46:Gi0-0-0-14", "r50:Gi0-0-0-46"]
-    - endpoints: ["r46:Gi0-0-0-15", "r51:Gi0-0-0-46"]
-    - endpoints: ["r46:Gi0-0-0-16", "r52:Gi0-0-0-46"]
-    - endpoints: ["r46:Gi0-0-0-17", "r53:Gi0-0-0-46"]
+    # - endpoints: ["r46:Gi0-0-0-14", "r50:Gi0-0-0-46"]
+    # - endpoints: ["r46:Gi0-0-0-15", "r51:Gi0-0-0-46"]
+    # - endpoints: ["r46:Gi0-0-0-16", "r52:Gi0-0-0-46"]
+    # - endpoints: ["r46:Gi0-0-0-17", "r53:Gi0-0-0-46"]
     
     ## r47 (47, 48), 
     - endpoints: ["r47:Gi0-0-0-12", "r48:Gi0-0-0-10"]
 
-    - endpoints: ["r47:Gi0-0-0-14", "r50:Gi0-0-0-47"]
-    - endpoints: ["r47:Gi0-0-0-15", "r51:Gi0-0-0-47"]
-    - endpoints: ["r47:Gi0-0-0-16", "r52:Gi0-0-0-47"]
-    - endpoints: ["r47:Gi0-0-0-17", "r53:Gi0-0-0-47"]  
+    # - endpoints: ["r47:Gi0-0-0-14", "r50:Gi0-0-0-47"]
+    # - endpoints: ["r47:Gi0-0-0-15", "r51:Gi0-0-0-47"]
+    # - endpoints: ["r47:Gi0-0-0-16", "r52:Gi0-0-0-47"]
+    # - endpoints: ["r47:Gi0-0-0-17", "r53:Gi0-0-0-47"]  
     
     ## r48 (48, 49)]
     - endpoints: ["r48:Gi0-0-0-12", "r49:Gi0-0-0-12"]
 
-    - endpoints: ["r48:Gi0-0-0-14", "r50:Gi0-0-0-48"]
-    - endpoints: ["r48:Gi0-0-0-15", "r51:Gi0-0-0-48"]
-    - endpoints: ["r48:Gi0-0-0-16", "r52:Gi0-0-0-48"]
-    - endpoints: ["r48:Gi0-0-0-17", "r53:Gi0-0-0-48"]
+    # - endpoints: ["r48:Gi0-0-0-14", "r50:Gi0-0-0-48"]
+    # - endpoints: ["r48:Gi0-0-0-15", "r51:Gi0-0-0-48"]
+    # - endpoints: ["r48:Gi0-0-0-16", "r52:Gi0-0-0-48"]
+    # - endpoints: ["r48:Gi0-0-0-17", "r53:Gi0-0-0-48"]
 
     ## r49
-    - endpoints: ["r49:Gi0-0-0-14", "r50:Gi0-0-0-49"]
-    - endpoints: ["r49:Gi0-0-0-15", "r51:Gi0-0-0-49"]
-    - endpoints: ["r49:Gi0-0-0-16", "r52:Gi0-0-0-49"]
-    - endpoints: ["r49:Gi0-0-0-17", "r53:Gi0-0-0-49"]
-
-### ToRs
-
-    ## t00
-    - endpoints: ["t00:Gi0-0-0-0", "r01:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-1", "r02:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-2", "r03:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-3", "r06:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-4", "r07:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-5", "r08:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-6", "r09:Gi0-0-0-18"]
-    - endpoints: ["t00:Gi0-0-0-7", "t00-host1:t00-Gi0-0-0-7"]
-    - endpoints: ["t00:Gi0-0-0-8", "t00-host2:t00-Gi0-0-0-8"]
-    # - endpoints: ["t00:Gi0-0-0-9", "r31:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-10", "r35:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-11", "r42:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-12", "r48:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-13", "r16:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-14", "r17:Gi0-0-0-18"]
-    # - endpoints: ["t00:Gi0-0-0-15", "r09:Gi0-0-0-18"]
-
-
-    ## t07
-    - endpoints: ["t07:Gi0-0-0-0", "r34:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-1", "r23:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-2", "r19:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-3", "r37:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-4", "r41:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-5", "r48:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-6", "r00:Gi0-0-0-18"]
-    - endpoints: ["t07:Gi0-0-0-7", "t07-host1:t07-Gi0-0-0-7"]
-    - endpoints: ["t07:Gi0-0-0-8", "t07-host2:t07-Gi0-0-0-8"]
-    # - endpoints: ["t07:Gi0-0-0-9", "r11:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-10", "r23:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-11", "r18:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-12", "r28:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-13", "r30:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-14", "r33:Gi0-0-0-18"]
-    # - endpoints: ["t07:Gi0-0-0-15", "r09:Gi0-0-0-18"]
-
-
+    # - endpoints: ["r49:Gi0-0-0-14", "r50:Gi0-0-0-49"]
+    # - endpoints: ["r49:Gi0-0-0-15", "r51:Gi0-0-0-49"]
+    # - endpoints: ["r49:Gi0-0-0-16", "r52:Gi0-0-0-49"]
+    # - endpoints: ["r49:Gi0-0-0-17", "r53:Gi0-0-0-49"]
 
 
 
