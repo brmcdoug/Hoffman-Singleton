@@ -1,0 +1,772 @@
+#  The hs-left.yaml launches the left half of a 50 node Hoffman-Singleton XRd topology using Containerlab
+#  The left half topology also includes 2 ToR nodes and 2 Tier-3/Spine nodes attached to the HS graph
+
+name: hs-graph-left
+
+mgmt:
+  network: mgt_net
+  ipv4-subnet: 172.20.50.0/24
+
+topology:
+  nodes:
+  ## HS Graph nodes
+    r00:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.100
+      startup-config: config/r00.cfg
+
+    r01:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.101
+      startup-config: config/r01.cfg
+
+    r02:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.102
+      startup-config: config/r02.cfg
+
+    r03:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.103
+      startup-config: config/r03.cfg
+
+    r04:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.104
+      startup-config: config/r04.cfg
+
+    r05:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.105
+      startup-config: config/r05.cfg
+
+    r06:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.106
+      startup-config: config/r06.cfg
+
+    r07:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.107
+      startup-config: config/r07.cfg
+
+    r08:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.108
+      startup-config: config/r08.cfg
+
+    r09:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.109
+      startup-config: config/r09.cfg
+
+    r10:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.110
+      startup-config: config/r10.cfg
+
+    r11:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.111
+      startup-config: config/r11.cfg
+
+    r12:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.112
+      startup-config: config/r12.cfg
+
+    r13:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.113
+      startup-config: config/r13.cfg
+
+    r14:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.114
+      startup-config: config/r14.cfg
+
+    r15:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.115
+      startup-config: config/r15.cfg
+
+    r16:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.116
+      startup-config: config/r16.cfg
+
+    r17:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.117
+      startup-config: config/r17.cfg
+
+    r18:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.118
+      startup-config: config/r18.cfg
+
+    r19:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.119
+      startup-config: config/r19.cfg
+
+    r20:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.120
+      startup-config: config/r20.cfg
+
+    r21:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.121
+      startup-config: config/r21.cfg
+
+    r22:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.122
+      startup-config: config/r22.cfg
+
+  ## Spine nodes
+    r50:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.150
+      startup-config: config/r50.cfg
+
+    r51:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.151
+      startup-config: config/r51.cfg
+
+    r52:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.152
+      startup-config: config/r52.cfg
+
+    r53:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.153
+      startup-config: config/r53.cfg
+
+  ## ToR nodes
+    t00:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.200
+      startup-config: config/t00.cfg
+
+    t07:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.1.1
+      mgmt-ipv4: 172.20.50.248
+      startup-config: config/t07.cfg
+
+    r00-host:
+      kind: bridge
+
+    r01-host:
+      kind: bridge
+
+    r02-host:
+      kind: bridge
+
+    r03-host:
+      kind: bridge
+
+    r04-host:
+      kind: bridge
+
+    r05-host:
+      kind: bridge
+
+    r06-host:
+      kind: bridge
+
+    r07-host:
+      kind: bridge
+
+    r08-host:
+      kind: bridge
+
+    r09-host:
+      kind: bridge
+
+    r10-host:
+      kind: bridge
+
+    r11-host:
+      kind: bridge
+
+    r12-host:
+      kind: bridge
+
+    r13-host:
+      kind: bridge
+
+    r14-host:
+      kind: bridge
+
+    r15-host:
+      kind: bridge
+
+    r16-host:
+      kind: bridge
+
+    r17-host:
+      kind: bridge
+
+    r18-host:
+      kind: bridge
+
+    r19-host:
+      kind: bridge
+
+    r20-host:
+      kind: bridge
+
+    r21-host:
+      kind: bridge
+
+    r22-host:
+      kind: bridge
+
+    r50-host:
+      kind: bridge
+
+    r51-host:
+      kind: bridge
+
+    r52-host:
+      kind: bridge
+
+    r53-host:
+      kind: bridge
+
+    t00-host:
+      kind: bridge
+
+    t00-host1:
+      kind: bridge
+
+    t00-host2:
+      kind: bridge
+
+    t07-host:
+      kind: bridge
+
+    t07-host1:
+      kind: bridge
+
+    t07-host2:
+      kind: bridge
+
+  links:
+    ## r00 (0, 1), (0, 2), (0, 3), (0, 6), (0, 7), (0, 8), (0, 9), 
+    - endpoints: ["r00:Gi0-0-0-0", "r01:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-1", "r01:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-2", "r02:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-3", "r02:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-4", "r03:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-5", "r03:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-6", "r06:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-7", "r06:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-8", "r07:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-9", "r07:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-10", "r08:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-11", "r08:Gi0-0-0-1"]
+    - endpoints: ["r00:Gi0-0-0-12", "r09:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-13", "r09:Gi0-0-0-1"]
+
+    - endpoints: ["r00:Gi0-0-0-14", "r50:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-15", "r51:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-16", "r52:Gi0-0-0-0"]
+    - endpoints: ["r00:Gi0-0-0-17", "r53:Gi0-0-0-0"]
+
+    ## r01 (1, 17), (1, 12), (1, 26), (1, 27), (1, 28), (1, 29), 
+    - endpoints: ["r01:Gi0-0-0-2", "r17:Gi0-0-0-0"]
+    - endpoints: ["r01:Gi0-0-0-3", "r17:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-4", "r12:Gi0-0-0-0"]
+    - endpoints: ["r01:Gi0-0-0-5", "r12:Gi0-0-0-1"]
+    # - endpoints: ["r01:Gi0-0-0-6", "r26:Gi0-0-0-0"]
+    # - endpoints: ["r01:Gi0-0-0-7", "r26:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-6", "r01-host:r01-Gi0-0-0-6"]
+    - endpoints: ["r01:Gi0-0-0-6", "r01-host:r01-Gi0-0-0-7"]
+    # - endpoints: ["r01:Gi0-0-0-8", "r27:Gi0-0-0-0"]
+    # - endpoints: ["r01:Gi0-0-0-9", "r27:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-8", "r01-host:r01-Gi0-0-0-8"]
+    - endpoints: ["r01:Gi0-0-0-9", "r01-host:r01-Gi0-0-0-9"]
+
+    # - endpoints: ["r01:Gi0-0-0-10", "r28:Gi0-0-0-0"]
+    # - endpoints: ["r01:Gi0-0-0-11", "r28:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-10", "r01-host:r01-Gi0-0-0-10"]
+    - endpoints: ["r01:Gi0-0-0-11", "r01-host:r01-Gi0-0-0-11"]
+
+    # - endpoints: ["r01:Gi0-0-0-12", "r29:Gi0-0-0-0"]
+    # - endpoints: ["r01:Gi0-0-0-13", "r29:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-12", "r01-host:r01-Gi0-0-0-12"]
+    - endpoints: ["r01:Gi0-0-0-13", "r01-host:r01-Gi0-0-0-13"]
+
+    - endpoints: ["r01:Gi0-0-0-14", "r50:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-15", "r51:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-16", "r52:Gi0-0-0-1"]
+    - endpoints: ["r01:Gi0-0-0-17", "r53:Gi0-0-0-1"] 
+
+    ## r02 (2, 10), (2, 11), (2, 13), (2, 14), (2, 15), (2, 16), 
+    - endpoints: ["r02:Gi0-0-0-2", "r10:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-3", "r10:Gi0-0-0-1"]
+    - endpoints: ["r02:Gi0-0-0-4", "r11:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-5", "r11:Gi0-0-0-1"]
+    - endpoints: ["r02:Gi0-0-0-6", "r13:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-7", "r13:Gi0-0-0-1"]
+    - endpoints: ["r02:Gi0-0-0-8", "r14:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-9", "r14:Gi0-0-0-1"]
+    - endpoints: ["r02:Gi0-0-0-10", "r15:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-11", "r15:Gi0-0-0-1"]
+    - endpoints: ["r02:Gi0-0-0-12", "r16:Gi0-0-0-0"]
+    - endpoints: ["r02:Gi0-0-0-13", "r16:Gi0-0-0-1"]
+
+    - endpoints: ["r02:Gi0-0-0-14", "r50:Gi0-0-0-2"]
+    - endpoints: ["r02:Gi0-0-0-15", "r51:Gi0-0-0-2"]
+    - endpoints: ["r02:Gi0-0-0-16", "r52:Gi0-0-0-2"]
+    - endpoints: ["r02:Gi0-0-0-17", "r53:Gi0-0-0-2"]
+
+    ## r03 (3, 4), (3, 5), (3, 30), (3, 35), (3, 40), (3, 45),
+    - endpoints: ["r03:Gi0-0-0-2", "r04:Gi0-0-0-0"]
+    - endpoints: ["r03:Gi0-0-0-3", "r04:Gi0-0-0-1"]
+    - endpoints: ["r03:Gi0-0-0-4", "r05:Gi0-0-0-0"]
+    - endpoints: ["r03:Gi0-0-0-5", "r05:Gi0-0-0-1"]
+    # - endpoints: ["r03:Gi0-0-0-6", "r30:Gi0-0-0-0"]
+    # - endpoints: ["r03:Gi0-0-0-7", "r30:Gi0-0-0-1"]
+    - endpoints: ["r03:Gi0-0-0-6", "r03-host:r03-Gi0-0-0-6"]
+    - endpoints: ["r03:Gi0-0-0-7", "r03-host:r03-Gi0-0-0-7"]
+
+    # - endpoints: ["r03:Gi0-0-0-8", "r35:Gi0-0-0-0"]
+    # - endpoints: ["r03:Gi0-0-0-9", "r35:Gi0-0-0-1"]
+    - endpoints: ["r03:Gi0-0-0-8", "r03-host:r03-Gi0-0-0-8"]
+    - endpoints: ["r03:Gi0-0-0-9", "r03-host:r03-Gi0-0-0-9"]
+
+    # - endpoints: ["r03:Gi0-0-0-10", "r40:Gi0-0-0-0"]
+    # - endpoints: ["r03:Gi0-0-0-11", "r40:Gi0-0-0-1"]
+    - endpoints: ["r03:Gi0-0-0-10", "r03-host:r03-Gi0-0-0-10"]
+    - endpoints: ["r03:Gi0-0-0-11", "r03-host:r03-Gi0-0-0-11"]
+
+    # - endpoints: ["r03:Gi0-0-0-12", "r45:Gi0-0-0-0"]
+    # - endpoints: ["r03:Gi0-0-0-13", "r45:Gi0-0-0-1"]
+    - endpoints: ["r03:Gi0-0-0-12", "r03-host:r03-Gi0-0-0-12"]
+    - endpoints: ["r03:Gi0-0-0-13", "r03-host:r03-Gi0-0-0-13"]
+
+    - endpoints: ["r03:Gi0-0-0-14", "r50:Gi0-0-0-3"]
+    - endpoints: ["r03:Gi0-0-0-15", "r51:Gi0-0-0-3"]
+    - endpoints: ["r03:Gi0-0-0-16", "r52:Gi0-0-0-3"]
+    - endpoints: ["r03:Gi0-0-0-17", "r53:Gi0-0-0-3"] 
+
+    ## r04 (4, 11), (4, 17), (4, 34), (4, 39), (4, 44), (4, 49), 
+    - endpoints: ["r04:Gi0-0-0-2", "r11:Gi0-0-0-2"]
+    - endpoints: ["r04:Gi0-0-0-3", "r11:Gi0-0-0-3"]
+    - endpoints: ["r04:Gi0-0-0-4", "r17:Gi0-0-0-2"]
+    - endpoints: ["r04:Gi0-0-0-5", "r17:Gi0-0-0-3"]
+    # - endpoints: ["r04:Gi0-0-0-6", "r34:Gi0-0-0-0"]
+    # - endpoints: ["r04:Gi0-0-0-7", "r34:Gi0-0-0-1"]
+    - endpoints: ["r04:Gi0-0-0-6", "r04-host:r04-Gi0-0-0-6"]
+    - endpoints: ["r04:Gi0-0-0-7", "r04-host:r04-Gi0-0-0-7"]
+
+    - endpoints: ["r04:Gi0-0-0-8", "r39:Gi0-0-0-0"]
+    - endpoints: ["r04:Gi0-0-0-9", "r39:Gi0-0-0-1"]
+    - endpoints: ["r04:Gi0-0-0-10", "r44:Gi0-0-0-0"]
+    - endpoints: ["r04:Gi0-0-0-11", "r44:Gi0-0-0-1"]
+    - endpoints: ["r04:Gi0-0-0-12", "r49:Gi0-0-0-0"]
+    - endpoints: ["r04:Gi0-0-0-13", "r49:Gi0-0-0-1"]
+
+    - endpoints: ["r04:Gi0-0-0-14", "r50:Gi0-0-0-4"]
+    - endpoints: ["r04:Gi0-0-0-15", "r51:Gi0-0-0-4"]
+    - endpoints: ["r04:Gi0-0-0-16", "r52:Gi0-0-0-4"]
+    - endpoints: ["r04:Gi0-0-0-17", "r53:Gi0-0-0-4"]
+
+    ## r05 (5, 12), (5, 10), (5, 33), (5, 38), (5, 43), (5, 48),
+    - endpoints: ["r05:Gi0-0-0-2", "r12:Gi0-0-0-2"]
+    - endpoints: ["r05:Gi0-0-0-3", "r12:Gi0-0-0-3"]
+    - endpoints: ["r05:Gi0-0-0-4", "r10:Gi0-0-0-2"]
+    - endpoints: ["r05:Gi0-0-0-5", "r10:Gi0-0-0-3"]
+    - endpoints: ["r05:Gi0-0-0-6", "r33:Gi0-0-0-0"]
+    - endpoints: ["r05:Gi0-0-0-7", "r33:Gi0-0-0-1"]
+    - endpoints: ["r05:Gi0-0-0-8", "r38:Gi0-0-0-0"]
+    - endpoints: ["r05:Gi0-0-0-9", "r38:Gi0-0-0-1"]
+    - endpoints: ["r05:Gi0-0-0-10", "r43:Gi0-0-0-0"]
+    - endpoints: ["r05:Gi0-0-0-11", "r43:Gi0-0-0-1"]
+    - endpoints: ["r05:Gi0-0-0-12", "r48:Gi0-0-0-0"]
+    - endpoints: ["r05:Gi0-0-0-13", "r48:Gi0-0-0-1"]
+
+    - endpoints: ["r05:Gi0-0-0-14", "r50:Gi0-0-0-5"]
+    - endpoints: ["r05:Gi0-0-0-15", "r51:Gi0-0-0-5"]
+    - endpoints: ["r05:Gi0-0-0-16", "r52:Gi0-0-0-5"]
+    - endpoints: ["r05:Gi0-0-0-17", "r53:Gi0-0-0-5"]
+
+    ## r06 (6, 22), (6, 18), (6, 31), (6, 39), (6, 43), (6, 47)
+    - endpoints: ["r06:Gi0-0-0-2", "r22:Gi0-0-0-0"]
+    - endpoints: ["r06:Gi0-0-0-3", "r22:Gi0-0-0-1"]
+    - endpoints: ["r06:Gi0-0-0-4", "r18:Gi0-0-0-0"]
+    - endpoints: ["r06:Gi0-0-0-5", "r18:Gi0-0-0-1"]
+    - endpoints: ["r06:Gi0-0-0-6", "r31:Gi0-0-0-0"]
+    - endpoints: ["r06:Gi0-0-0-7", "r31:Gi0-0-0-1"]
+    - endpoints: ["r06:Gi0-0-0-8", "r39:Gi0-0-0-2"]
+    - endpoints: ["r06:Gi0-0-0-9", "r39:Gi0-0-0-3"]
+    - endpoints: ["r06:Gi0-0-0-10", "r43:Gi0-0-0-2"]
+    - endpoints: ["r06:Gi0-0-0-11", "r43:Gi0-0-0-3"]
+    - endpoints: ["r06:Gi0-0-0-12", "r47:Gi0-0-0-0"]
+    - endpoints: ["r06:Gi0-0-0-13", "r47:Gi0-0-0-1"]
+
+    - endpoints: ["r06:Gi0-0-0-14", "r50:Gi0-0-0-6"]
+    - endpoints: ["r06:Gi0-0-0-15", "r51:Gi0-0-0-6"]
+    - endpoints: ["r06:Gi0-0-0-16", "r52:Gi0-0-0-6"]
+    - endpoints: ["r06:Gi0-0-0-17", "r53:Gi0-0-0-6"]
+
+    ## r07 (7, 34), (7, 23), (7, 19), (7, 37), (7, 41), (7, 48)
+    - endpoints: ["r07:Gi0-0-0-2", "r34:Gi0-0-0-2"]
+    - endpoints: ["r07:Gi0-0-0-3", "r34:Gi0-0-0-3"]
+    - endpoints: ["r07:Gi0-0-0-4", "r23:Gi0-0-0-0"]
+    - endpoints: ["r07:Gi0-0-0-5", "r23:Gi0-0-0-1"]
+    - endpoints: ["r07:Gi0-0-0-6", "r19:Gi0-0-0-0"]
+    - endpoints: ["r07:Gi0-0-0-7", "r19:Gi0-0-0-1"]
+    - endpoints: ["r07:Gi0-0-0-8", "r37:Gi0-0-0-0"]
+    - endpoints: ["r07:Gi0-0-0-9", "r37:Gi0-0-0-1"]
+    - endpoints: ["r07:Gi0-0-0-10", "r41:Gi0-0-0-0"]
+    - endpoints: ["r07:Gi0-0-0-11", "r41:Gi0-0-0-1"]
+    - endpoints: ["r07:Gi0-0-0-12", "r48:Gi0-0-0-2"]
+    - endpoints: ["r07:Gi0-0-0-13", "r48:Gi0-0-0-3"]
+
+    - endpoints: ["r07:Gi0-0-0-14", "r50:Gi0-0-0-7"]
+    - endpoints: ["r07:Gi0-0-0-15", "r51:Gi0-0-0-7"]
+    - endpoints: ["r07:Gi0-0-0-16", "r52:Gi0-0-0-7"]
+    - endpoints: ["r07:Gi0-0-0-17", "r53:Gi0-0-0-7"]
+
+    ## r08 (8, 33), (8, 36), (8, 24), (8, 20), (8, 42), (8, 49)
+    - endpoints: ["r08:Gi0-0-0-2", "r33:Gi0-0-0-2"]
+    - endpoints: ["r08:Gi0-0-0-3", "r33:Gi0-0-0-3"]
+    - endpoints: ["r08:Gi0-0-0-4", "r36:Gi0-0-0-0"]
+    - endpoints: ["r08:Gi0-0-0-5", "r36:Gi0-0-0-1"]
+    - endpoints: ["r08:Gi0-0-0-6", "r24:Gi0-0-0-0"]
+    - endpoints: ["r08:Gi0-0-0-7", "r24:Gi0-0-0-1"]
+    - endpoints: ["r08:Gi0-0-0-8", "r20:Gi0-0-0-0"]
+    - endpoints: ["r08:Gi0-0-0-9", "r20:Gi0-0-0-1"]
+    - endpoints: ["r08:Gi0-0-0-10", "r42:Gi0-0-0-0"]
+    - endpoints: ["r08:Gi0-0-0-11", "r42:Gi0-0-0-1"]
+    - endpoints: ["r08:Gi0-0-0-12", "r49:Gi0-0-0-2"]
+    - endpoints: ["r08:Gi0-0-0-13", "r49:Gi0-0-0-3"]
+
+    - endpoints: ["r08:Gi0-0-0-14", "r50:Gi0-0-0-8"]
+    - endpoints: ["r08:Gi0-0-0-15", "r51:Gi0-0-0-8"]
+    - endpoints: ["r08:Gi0-0-0-16", "r52:Gi0-0-0-8"]
+    - endpoints: ["r08:Gi0-0-0-17", "r53:Gi0-0-0-8"]
+
+    ## r09 (9, 32), (9, 38), (9, 44), (9, 25), (9, 21), (9, 46)
+    - endpoints: ["r09:Gi0-0-0-2", "r32:Gi0-0-0-0"]
+    - endpoints: ["r09:Gi0-0-0-3", "r32:Gi0-0-0-1"]
+    - endpoints: ["r09:Gi0-0-0-4", "r38:Gi0-0-0-2"]
+    - endpoints: ["r09:Gi0-0-0-5", "r38:Gi0-0-0-3"]
+    - endpoints: ["r09:Gi0-0-0-6", "r44:Gi0-0-0-2"]
+    - endpoints: ["r09:Gi0-0-0-7", "r44:Gi0-0-0-3"]
+    - endpoints: ["r09:Gi0-0-0-8", "r25:Gi0-0-0-0"]
+    - endpoints: ["r09:Gi0-0-0-9", "r25:Gi0-0-0-1"]
+    - endpoints: ["r09:Gi0-0-0-10", "r21:Gi0-0-0-0"]
+    - endpoints: ["r09:Gi0-0-0-11", "r21:Gi0-0-0-1"]
+    - endpoints: ["r09:Gi0-0-0-12", "r46:Gi0-0-0-0"]
+    - endpoints: ["r09:Gi0-0-0-13", "r46:Gi0-0-0-1"]
+
+    - endpoints: ["r09:Gi0-0-0-14", "r50:Gi0-0-0-9"]
+    - endpoints: ["r09:Gi0-0-0-15", "r51:Gi0-0-0-9"]
+    - endpoints: ["r09:Gi0-0-0-16", "r52:Gi0-0-0-9"]
+    - endpoints: ["r09:Gi0-0-0-17", "r53:Gi0-0-0-9"]
+
+    ## r10 (10, 17), (10, 18), (10, 19), (10, 20), (10, 21)
+    - endpoints: ["r10:Gi0-0-0-4", "r17:Gi0-0-0-4"]
+    - endpoints: ["r10:Gi0-0-0-5", "r17:Gi0-0-0-5"]
+    - endpoints: ["r10:Gi0-0-0-6", "r18:Gi0-0-0-2"]
+    - endpoints: ["r10:Gi0-0-0-7", "r18:Gi0-0-0-3"]
+    - endpoints: ["r10:Gi0-0-0-8", "r19:Gi0-0-0-2"]
+    - endpoints: ["r10:Gi0-0-0-9", "r19:Gi0-0-0-3"]
+    - endpoints: ["r10:Gi0-0-0-10", "r20:Gi0-0-0-2"]
+    - endpoints: ["r10:Gi0-0-0-11", "r20:Gi0-0-0-3"]
+    - endpoints: ["r10:Gi0-0-0-12", "r21:Gi0-0-0-2"]
+    - endpoints: ["r10:Gi0-0-0-13", "r21:Gi0-0-0-3"]
+
+    - endpoints: ["r10:Gi0-0-0-14", "r50:Gi0-0-0-10"]
+    - endpoints: ["r10:Gi0-0-0-15", "r51:Gi0-0-0-10"]
+    - endpoints: ["r10:Gi0-0-0-16", "r52:Gi0-0-0-10"]
+    - endpoints: ["r10:Gi0-0-0-17", "r53:Gi0-0-0-10"]
+
+    ## r11 (11, 12), (11, 32), (11, 37), (11, 42), (11, 47),
+    - endpoints: ["r11:Gi0-0-0-4", "r12:Gi0-0-0-4"]
+    - endpoints: ["r11:Gi0-0-0-5", "r12:Gi0-0-0-5"]
+    - endpoints: ["r11:Gi0-0-0-6", "r32:Gi0-0-0-2"]
+    - endpoints: ["r11:Gi0-0-0-7", "r32:Gi0-0-0-3"]
+    - endpoints: ["r11:Gi0-0-0-8", "r37:Gi0-0-0-2"]
+    - endpoints: ["r11:Gi0-0-0-9", "r37:Gi0-0-0-3"]
+    - endpoints: ["r11:Gi0-0-0-10", "r42:Gi0-0-0-2"]
+    - endpoints: ["r11:Gi0-0-0-11", "r42:Gi0-0-0-3"]
+    - endpoints: ["r11:Gi0-0-0-12", "r47:Gi0-0-0-2"]
+    - endpoints: ["r11:Gi0-0-0-13", "r47:Gi0-0-0-3"]
+
+    - endpoints: ["r11:Gi0-0-0-14", "r50:Gi0-0-0-11"]
+    - endpoints: ["r11:Gi0-0-0-15", "r51:Gi0-0-0-11"]
+    - endpoints: ["r11:Gi0-0-0-16", "r52:Gi0-0-0-11"]
+    - endpoints: ["r11:Gi0-0-0-17", "r53:Gi0-0-0-11"]
+
+    ## r12 (12, 31), (12, 36), (12, 41), (12, 46), 
+    - endpoints: ["r12:Gi0-0-0-6", "r31:Gi0-0-0-2"]
+    - endpoints: ["r12:Gi0-0-0-7", "r31:Gi0-0-0-3"]
+    - endpoints: ["r12:Gi0-0-0-8", "r36:Gi0-0-0-2"]
+    - endpoints: ["r12:Gi0-0-0-9", "r36:Gi0-0-0-3"]
+    - endpoints: ["r12:Gi0-0-0-10", "r41:Gi0-0-0-2"]
+    - endpoints: ["r12:Gi0-0-0-11", "r41:Gi0-0-0-3"]
+    - endpoints: ["r12:Gi0-0-0-12", "r46:Gi0-0-0-2"]
+    - endpoints: ["r12:Gi0-0-0-13", "r46:Gi0-0-0-3"]
+
+    - endpoints: ["r12:Gi0-0-0-14", "r50:Gi0-0-0-12"]
+    - endpoints: ["r12:Gi0-0-0-15", "r51:Gi0-0-0-12"]
+    - endpoints: ["r12:Gi0-0-0-16", "r52:Gi0-0-0-12"]
+    - endpoints: ["r12:Gi0-0-0-17", "r53:Gi0-0-0-12"]
+    
+    
+    ## r13 (13, 30), (13, 26), (13, 22), (13, 36), (13, 44), (13, 48),
+    - endpoints: ["r13:Gi0-0-0-2", "r30:Gi0-0-0-2"]
+    - endpoints: ["r13:Gi0-0-0-3", "r30:Gi0-0-0-3"]
+    - endpoints: ["r13:Gi0-0-0-4", "r26:Gi0-0-0-2"]
+    - endpoints: ["r13:Gi0-0-0-5", "r26:Gi0-0-0-3"]
+    - endpoints: ["r13:Gi0-0-0-6", "r22:Gi0-0-0-2"]
+    - endpoints: ["r13:Gi0-0-0-7", "r22:Gi0-0-0-3"]
+    - endpoints: ["r13:Gi0-0-0-8", "r36:Gi0-0-0-4"]
+    - endpoints: ["r13:Gi0-0-0-9", "r36:Gi0-0-0-5"]
+    - endpoints: ["r13:Gi0-0-0-10", "r44:Gi0-0-0-4"]
+    - endpoints: ["r13:Gi0-0-0-11", "r44:Gi0-0-0-5"]
+    - endpoints: ["r13:Gi0-0-0-12", "r48:Gi0-0-0-4"]
+    - endpoints: ["r13:Gi0-0-0-13", "r48:Gi0-0-0-5"]
+
+    - endpoints: ["r13:Gi0-0-0-14", "r50:Gi0-0-0-13"]
+    - endpoints: ["r13:Gi0-0-0-15", "r51:Gi0-0-0-13"]
+    - endpoints: ["r13:Gi0-0-0-16", "r52:Gi0-0-0-13"]
+    - endpoints: ["r13:Gi0-0-0-17", "r53:Gi0-0-0-13"]
+
+    ## r14 (14, 31), (14, 27), (14, 23), (14, 38), (14, 40), (14, 49), 
+    - endpoints: ["r14:Gi0-0-0-2", "r31:Gi0-0-0-4"]
+    - endpoints: ["r14:Gi0-0-0-3", "r31:Gi0-0-0-5"]
+    - endpoints: ["r14:Gi0-0-0-4", "r27:Gi0-0-0-2"]
+    - endpoints: ["r14:Gi0-0-0-5", "r27:Gi0-0-0-3"]
+    - endpoints: ["r14:Gi0-0-0-6", "r23:Gi0-0-0-2"]
+    - endpoints: ["r14:Gi0-0-0-7", "r23:Gi0-0-0-3"]
+    - endpoints: ["r14:Gi0-0-0-8", "r38:Gi0-0-0-4"]
+    - endpoints: ["r14:Gi0-0-0-9", "r38:Gi0-0-0-5"]
+    - endpoints: ["r14:Gi0-0-0-10", "r40:Gi0-0-0-2"]
+    - endpoints: ["r14:Gi0-0-0-11", "r40:Gi0-0-0-3"]
+    - endpoints: ["r14:Gi0-0-0-12", "r49:Gi0-0-0-4"]
+    - endpoints: ["r14:Gi0-0-0-13", "r49:Gi0-0-0-5"]
+
+    - endpoints: ["r14:Gi0-0-0-14", "r50:Gi0-0-0-14"]
+    - endpoints: ["r14:Gi0-0-0-15", "r51:Gi0-0-0-14"]
+    - endpoints: ["r14:Gi0-0-0-16", "r52:Gi0-0-0-14"]
+    - endpoints: ["r14:Gi0-0-0-17", "r53:Gi0-0-0-14"]    
+    
+    ## r15 (15, 34), (15, 35), (15, 28), (15, 24), (15, 43), (15, 46),
+    - endpoints: ["r15:Gi0-0-0-2", "r34:Gi0-0-0-4"]
+    - endpoints: ["r15:Gi0-0-0-3", "r34:Gi0-0-0-5"]
+    - endpoints: ["r15:Gi0-0-0-4", "r35:Gi0-0-0-2"]
+    - endpoints: ["r15:Gi0-0-0-5", "r35:Gi0-0-0-3"]
+    - endpoints: ["r15:Gi0-0-0-6", "r28:Gi0-0-0-2"]
+    - endpoints: ["r15:Gi0-0-0-7", "r28:Gi0-0-0-3"]
+    - endpoints: ["r15:Gi0-0-0-8", "r24:Gi0-0-0-2"]
+    - endpoints: ["r15:Gi0-0-0-9", "r24:Gi0-0-0-3"]
+    - endpoints: ["r15:Gi0-0-0-10", "r43:Gi0-0-0-4"]
+    - endpoints: ["r15:Gi0-0-0-11", "r43:Gi0-0-0-5"]
+    - endpoints: ["r15:Gi0-0-0-12", "r46:Gi0-0-0-4"]
+    - endpoints: ["r15:Gi0-0-0-13", "r46:Gi0-0-0-5"]
+
+    - endpoints: ["r15:Gi0-0-0-14", "r50:Gi0-0-0-15"]
+    - endpoints: ["r15:Gi0-0-0-15", "r51:Gi0-0-0-15"]
+    - endpoints: ["r15:Gi0-0-0-16", "r52:Gi0-0-0-15"]
+    - endpoints: ["r15:Gi0-0-0-17", "r53:Gi0-0-0-15"]
+
+    ## r16 (16, 33), (16, 39), (16, 41), (16, 45), (16, 29), (16, 25), 
+    - endpoints: ["r16:Gi0-0-0-2", "r33:Gi0-0-0-4"]
+    - endpoints: ["r16:Gi0-0-0-3", "r33:Gi0-0-0-5"]
+    - endpoints: ["r16:Gi0-0-0-4", "r39:Gi0-0-0-4"]
+    - endpoints: ["r16:Gi0-0-0-5", "r39:Gi0-0-0-5"]
+    - endpoints: ["r16:Gi0-0-0-6", "r41:Gi0-0-0-4"]
+    - endpoints: ["r16:Gi0-0-0-7", "r41:Gi0-0-0-5"]
+    - endpoints: ["r16:Gi0-0-0-8", "r45:Gi0-0-0-2"]
+    - endpoints: ["r16:Gi0-0-0-9", "r45:Gi0-0-0-3"]
+    - endpoints: ["r16:Gi0-0-0-10", "r29:Gi0-0-0-2"]
+    - endpoints: ["r16:Gi0-0-0-11", "r29:Gi0-0-0-3"]
+    - endpoints: ["r16:Gi0-0-0-12", "r25:Gi0-0-0-2"]
+    - endpoints: ["r16:Gi0-0-0-13", "r25:Gi0-0-0-3"]
+
+    - endpoints: ["r16:Gi0-0-0-14", "r50:Gi0-0-0-16"]
+    - endpoints: ["r16:Gi0-0-0-15", "r51:Gi0-0-0-16"]
+    - endpoints: ["r16:Gi0-0-0-16", "r52:Gi0-0-0-16"]
+    - endpoints: ["r16:Gi0-0-0-17", "r53:Gi0-0-0-16"]    
+    
+    ## r17 (17, 22), (17, 23), (17, 24), (17, 25),
+    - endpoints: ["r17:Gi0-0-0-6", "r22:Gi0-0-0-4"]
+    - endpoints: ["r17:Gi0-0-0-7", "r22:Gi0-0-0-5"]
+    - endpoints: ["r17:Gi0-0-0-8", "r23:Gi0-0-0-4"]
+    - endpoints: ["r17:Gi0-0-0-9", "r23:Gi0-0-0-5"]
+    - endpoints: ["r17:Gi0-0-0-10", "r24:Gi0-0-0-4"]
+    - endpoints: ["r17:Gi0-0-0-11", "r24:Gi0-0-0-5"]
+    - endpoints: ["r17:Gi0-0-0-12", "r25:Gi0-0-0-4"]
+    - endpoints: ["r17:Gi0-0-0-13", "r25:Gi0-0-0-5"]
+
+    - endpoints: ["r17:Gi0-0-0-14", "r50:Gi0-0-0-17"]
+    - endpoints: ["r17:Gi0-0-0-15", "r51:Gi0-0-0-17"]
+    - endpoints: ["r17:Gi0-0-0-16", "r52:Gi0-0-0-17"]
+    - endpoints: ["r17:Gi0-0-0-17", "r53:Gi0-0-0-17"] 
+
+    ## r18 (18, 32), (18, 26), (18, 35), (18, 41), (18, 49), 
+    - endpoints: ["r18:Gi0-0-0-4", "r32:Gi0-0-0-4"]
+    - endpoints: ["r18:Gi0-0-0-5", "r32:Gi0-0-0-5"]
+    - endpoints: ["r18:Gi0-0-0-6", "r26:Gi0-0-0-4"]
+    - endpoints: ["r18:Gi0-0-0-7", "r26:Gi0-0-0-5"]
+    - endpoints: ["r18:Gi0-0-0-8", "r35:Gi0-0-0-4"]
+    - endpoints: ["r18:Gi0-0-0-9", "r35:Gi0-0-0-5"]
+    - endpoints: ["r18:Gi0-0-0-10", "r41:Gi0-0-0-6"]
+    - endpoints: ["r18:Gi0-0-0-11", "r41:Gi0-0-0-7"]
+    - endpoints: ["r18:Gi0-0-0-12", "r49:Gi0-0-0-6"]
+    - endpoints: ["r18:Gi0-0-0-13", "r49:Gi0-0-0-7"]
+
+    - endpoints: ["r18:Gi0-0-0-14", "r50:Gi0-0-0-18"]
+    - endpoints: ["r18:Gi0-0-0-15", "r51:Gi0-0-0-18"]
+    - endpoints: ["r18:Gi0-0-0-16", "r52:Gi0-0-0-18"]
+    - endpoints: ["r18:Gi0-0-0-17", "r53:Gi0-0-0-18"] 
+    
+    ## r19 (19, 30), (19, 27), (19, 39), (19, 42), (19, 46),
+    - endpoints: ["r19:Gi0-0-0-4", "r30:Gi0-0-0-4"]
+    - endpoints: ["r19:Gi0-0-0-5", "r30:Gi0-0-0-5"]
+    - endpoints: ["r19:Gi0-0-0-6", "r27:Gi0-0-0-4"]
+    - endpoints: ["r19:Gi0-0-0-7", "r27:Gi0-0-0-5"]
+    - endpoints: ["r19:Gi0-0-0-8", "r39:Gi0-0-0-6"]
+    - endpoints: ["r19:Gi0-0-0-9", "r39:Gi0-0-0-7"]
+    - endpoints: ["r19:Gi0-0-0-10", "r42:Gi0-0-0-4"]
+    - endpoints: ["r19:Gi0-0-0-11", "r42:Gi0-0-0-5"]
+    - endpoints: ["r19:Gi0-0-0-12", "r46:Gi0-0-0-6"]
+    - endpoints: ["r19:Gi0-0-0-13", "r46:Gi0-0-0-7"]
+
+    - endpoints: ["r19:Gi0-0-0-14", "r50:Gi0-0-0-19"]
+    - endpoints: ["r19:Gi0-0-0-15", "r51:Gi0-0-0-19"]
+    - endpoints: ["r19:Gi0-0-0-16", "r52:Gi0-0-0-19"]
+    - endpoints: ["r19:Gi0-0-0-17", "r53:Gi0-0-0-19"] 
+
+    ## r20 (20, 31), (20, 37), (20, 28), (20, 44), (20, 45),
+    - endpoints: ["r20:Gi0-0-0-4", "r31:Gi0-0-0-6"]
+    - endpoints: ["r20:Gi0-0-0-5", "r31:Gi0-0-0-7"]
+    - endpoints: ["r20:Gi0-0-0-6", "r37:Gi0-0-0-4"]
+    - endpoints: ["r20:Gi0-0-0-7", "r37:Gi0-0-0-5"]
+    - endpoints: ["r20:Gi0-0-0-8", "r28:Gi0-0-0-4"]
+    - endpoints: ["r20:Gi0-0-0-9", "r28:Gi0-0-0-5"]
+    - endpoints: ["r20:Gi0-0-0-10", "r44:Gi0-0-0-6"]
+    - endpoints: ["r20:Gi0-0-0-11", "r44:Gi0-0-0-7"]
+    - endpoints: ["r20:Gi0-0-0-12", "r45:Gi0-0-0-4"]
+    - endpoints: ["r20:Gi0-0-0-13", "r45:Gi0-0-0-5"]
+
+    - endpoints: ["r20:Gi0-0-0-14", "r50:Gi0-0-0-20"]
+    - endpoints: ["r20:Gi0-0-0-15", "r51:Gi0-0-0-20"]
+    - endpoints: ["r20:Gi0-0-0-16", "r52:Gi0-0-0-20"]
+    - endpoints: ["r20:Gi0-0-0-17", "r53:Gi0-0-0-20"]    
+    
+    ## r21 (21, 34), (21, 36), (21, 40), (21, 47), (21, 29),
+    - endpoints: ["r21:Gi0-0-0-4", "r34:Gi0-0-0-6"]
+    - endpoints: ["r21:Gi0-0-0-5", "r34:Gi0-0-0-7"]
+    - endpoints: ["r21:Gi0-0-0-6", "r36:Gi0-0-0-6"]
+    - endpoints: ["r21:Gi0-0-0-7", "r36:Gi0-0-0-7"]
+    - endpoints: ["r21:Gi0-0-0-8", "r40:Gi0-0-0-4"]
+    - endpoints: ["r21:Gi0-0-0-9", "r40:Gi0-0-0-5"]
+    - endpoints: ["r21:Gi0-0-0-10", "r47:Gi0-0-0-4"]
+    - endpoints: ["r21:Gi0-0-0-11", "r47:Gi0-0-0-5"]
+    - endpoints: ["r21:Gi0-0-0-12", "r29:Gi0-0-0-4"]
+    - endpoints: ["r21:Gi0-0-0-13", "r29:Gi0-0-0-5"]
+
+    - endpoints: ["r21:Gi0-0-0-14", "r50:Gi0-0-0-21"]
+    - endpoints: ["r21:Gi0-0-0-15", "r51:Gi0-0-0-21"]
+    - endpoints: ["r21:Gi0-0-0-16", "r52:Gi0-0-0-21"]
+    - endpoints: ["r21:Gi0-0-0-17", "r53:Gi0-0-0-21"]
+
+    ## r22 (22, 33), (22, 37), (22, 40), (22, 46), 
+    - endpoints: ["r22:Gi0-0-0-6", "r33:Gi0-0-0-6"]
+    - endpoints: ["r22:Gi0-0-0-7", "r33:Gi0-0-0-7"]
+    - endpoints: ["r22:Gi0-0-0-8", "r37:Gi0-0-0-6"]
+    - endpoints: ["r22:Gi0-0-0-9", "r37:Gi0-0-0-7"]
+    - endpoints: ["r22:Gi0-0-0-10", "r40:Gi0-0-0-6"]
+    - endpoints: ["r22:Gi0-0-0-11", "r40:Gi0-0-0-7"]
+    - endpoints: ["r22:Gi0-0-0-12", "r46:Gi0-0-0-8"]
+    - endpoints: ["r22:Gi0-0-0-13", "r46:Gi0-0-0-9"]
+
+    - endpoints: ["r22:Gi0-0-0-14", "r50:Gi0-0-0-22"]
+    - endpoints: ["r22:Gi0-0-0-15", "r51:Gi0-0-0-22"]
+    - endpoints: ["r22:Gi0-0-0-16", "r52:Gi0-0-0-22"]
+    - endpoints: ["r22:Gi0-0-0-17", "r53:Gi0-0-0-22"]    
+
+### ToRs
+
+    ## t00
+    - endpoints: ["t00:Gi0-0-0-0", "r01:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-1", "r02:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-2", "r03:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-3", "r06:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-4", "r07:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-5", "r08:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-6", "r09:Gi0-0-0-18"]
+    - endpoints: ["t00:Gi0-0-0-7", "t00-host1:t00-Gi0-0-0-7"]
+    - endpoints: ["t00:Gi0-0-0-8", "t00-host2:t00-Gi0-0-0-8"]
+    # - endpoints: ["t00:Gi0-0-0-9", "r31:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-10", "r35:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-11", "r42:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-12", "r48:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-13", "r16:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-14", "r17:Gi0-0-0-18"]
+    # - endpoints: ["t00:Gi0-0-0-15", "r09:Gi0-0-0-18"]
+
+
+    ## t07
+    - endpoints: ["t07:Gi0-0-0-0", "r34:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-1", "r23:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-2", "r19:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-3", "r37:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-4", "r41:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-5", "r48:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-6", "r00:Gi0-0-0-18"]
+    - endpoints: ["t07:Gi0-0-0-7", "t07-host1:t07-Gi0-0-0-7"]
+    - endpoints: ["t07:Gi0-0-0-8", "t07-host2:t07-Gi0-0-0-8"]
+    # - endpoints: ["t07:Gi0-0-0-9", "r11:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-10", "r23:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-11", "r18:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-12", "r28:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-13", "r30:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-14", "r33:Gi0-0-0-18"]
+    # - endpoints: ["t07:Gi0-0-0-15", "r09:Gi0-0-0-18"]
+
+
+
+
+
+
