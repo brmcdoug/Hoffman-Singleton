@@ -276,14 +276,14 @@ topology:
     t00-host2:
       kind: bridge
 
-    # t07-host:
-    #   kind: bridge
+    t07-host:
+      kind: bridge
 
-    # t07-host1:
-    #   kind: bridge
+    t07-host1:
+      kind: bridge
 
-    # t07-host2:
-    #   kind: bridge
+    t07-host2:
+      kind: bridge
 
   links:
     ## r00 (0, 1), (0, 2), (0, 3), (0, 6), (0, 7), (0, 8), (0, 9), 

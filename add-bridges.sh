@@ -29,8 +29,11 @@ sudo brctl addbr r51-host
 sudo brctl addbr r52-host
 sudo brctl addbr r53-host
 
+
+sudo brctl addbr t00-host
 sudo brctl addbr t00-host1
 sudo brctl addbr t00-host2
+sudo brctl addbr t07-host
 sudo brctl addbr t07-host1
 sudo brctl addbr t07-host2
 
@@ -63,7 +66,9 @@ sudo ip link set up r51-host
 sudo ip link set up r52-host
 sudo ip link set up r53-host
 
+sudo ip link set up t00-host
 sudo ip link set up t00-host1
 sudo ip link set up t00-host2
+sudo ip link set up t07-host
 sudo ip link set up t07-host1
 sudo ip link set up t07-host2
