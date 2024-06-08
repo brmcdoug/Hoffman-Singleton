@@ -315,7 +315,7 @@ topology:
     # - endpoints: ["r01:Gi0-0-0-6", "r26:Gi0-0-0-0"]
     # - endpoints: ["r01:Gi0-0-0-7", "r26:Gi0-0-0-1"]
     - endpoints: ["r01:Gi0-0-0-6", "r01-host:r01-Gi0-0-0-6"]
-    - endpoints: ["r01:Gi0-0-0-6", "r01-host:r01-Gi0-0-0-7"]
+    - endpoints: ["r01:Gi0-0-0-7", "r01-host:r01-Gi0-0-0-7"]
     # - endpoints: ["r01:Gi0-0-0-8", "r27:Gi0-0-0-0"]
     # - endpoints: ["r01:Gi0-0-0-9", "r27:Gi0-0-0-1"]
     - endpoints: ["r01:Gi0-0-0-8", "r01-host:r01-Gi0-0-0-8"]
@@ -669,8 +669,8 @@ topology:
 
     # - endpoints: ["r13:Gi0-0-0-10", "r44:Gi0-0-0-4"]
     # - endpoints: ["r13:Gi0-0-0-11", "r44:Gi0-0-0-5"]
+    - endpoints: ["r13:Gi0-0-0-10", "r13-host:r13-Gi0-0-0-10"]
     - endpoints: ["r13:Gi0-0-0-11", "r13-host:r13-Gi0-0-0-11"]
-    - endpoints: ["r13:Gi0-0-0-12", "r13-host:r13-Gi0-0-0-12"]
 
     # - endpoints: ["r13:Gi0-0-0-12", "r48:Gi0-0-0-4"]
     # - endpoints: ["r13:Gi0-0-0-13", "r48:Gi0-0-0-5"]
