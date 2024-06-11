@@ -1,7 +1,7 @@
 #  The hs-left.yaml launches the left half of a 50 node Hoffman-Singleton XRd topology using Containerlab
 #  The left half topology also includes 2 ToR nodes and 2 Tier-3/Spine nodes attached to the HS graph
 
-name: hs-graph-left
+name: hs
 
 mgmt:
   network: mgt_net
