@@ -222,6 +222,12 @@ topology:
     r49-host:
       kind: bridge
 
+    r50-host:
+      kind: bridge
+
+    r51-host:
+      kind: bridge
+
   links:
 
     ## r28 (28, 32), (28, 39), (28, 40), (28, 48), 
