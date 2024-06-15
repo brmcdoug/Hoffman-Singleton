@@ -303,8 +303,8 @@ topology:
     - endpoints: ["r00:Gi0-0-0-5", "r08:Gi0-0-0-0"]
     - endpoints: ["r00:Gi0-0-0-6", "r09:Gi0-0-0-0"]
 
-    - endpoints: ["r00:Gi0-0-0-7", "r00-host:r01-Gi0-0-0-7"]
-    - endpoints: ["r00:Gi0-0-0-8", "r00-host:r01-Gi0-0-0-8"]
+    - endpoints: ["r00:Gi0-0-0-7", "r00-host:r00-Gi0-0-0-7"]
+    - endpoints: ["r00:Gi0-0-0-8", "r00-host:r00-Gi0-0-0-8"]
 
     ## r01 (1, 17), (1, 12), (1, 26), (1, 27), (1, 28), (1, 29), 
     - endpoints: ["r01:Gi0-0-0-1", "r17:Gi0-0-0-0"]
