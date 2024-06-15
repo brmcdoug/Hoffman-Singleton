@@ -38,7 +38,7 @@ sudo ip link set up r36-host
 sudo ip link set up r37-host
 sudo ip link set up r38-host
 sudo ip link set up r39-host
-sudo ip link set up r20-host
+sudo ip link set up r40-host
 sudo ip link set up r41-host
 sudo ip link set up r42-host
 sudo ip link set up r43-host
