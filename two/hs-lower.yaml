@@ -275,10 +275,16 @@ topology:
     r27-host:
       kind: bridge
 
+    t00-host:
+      kind: bridge
+
     t00-host1:
       kind: bridge
 
     t00-host2:
+      kind: bridge
+
+    t07-host:
       kind: bridge
 
     t07-host1:
