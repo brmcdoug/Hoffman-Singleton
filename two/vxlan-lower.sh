@@ -7,14 +7,14 @@ clab tools vxlan create --remote 198.18.1.105 --id 1010 --link r00-Gi0-0-0-7
 clab tools vxlan create --remote 198.18.1.105 --id 1011 --link r00-Gi0-0-0-8
 
 # r01
-clab tools vxlan create --remote 198.18.1.105 --id 1012 --link r01-Gi0-0-0-5
-clab tools vxlan create --remote 198.18.1.105 --id 1013 --link r01-Gi0-0-0-6
+clab tools vxlan create --remote 198.18.1.105 --id 1012 --link r01-Gi0-0-0-5 # r28 gi0
+clab tools vxlan create --remote 198.18.1.105 --id 1013 --link r01-Gi0-0-0-6 # r29 gi0
 clab tools vxlan create --remote 198.18.1.105 --id 1014 --link r01-Gi0-0-0-7
 clab tools vxlan create --remote 198.18.1.105 --id 1015 --link r01-Gi0-0-0-8
 
 # r02
-clab tools vxlan create --remote 198.18.1.105 --id 1016 --link r02-Gi0-0-0-7
-clab tools vxlan create --remote 198.18.1.105 --id 1017 --link r02-Gi0-0-0-8
+clab tools vxlan create --remote 198.18.1.105 --id 1216 --link r02-Gi0-0-0-7
+clab tools vxlan create --remote 198.18.1.105 --id 1217 --link r02-Gi0-0-0-8
 
 # r03
 clab tools vxlan create --remote 198.18.1.105 --id 1016 --link r03-Gi0-0-0-3
@@ -121,6 +121,7 @@ clab tools vxlan create --remote 198.18.1.105 --id 1090 --link r15-Gi0-0-0-8
 clab tools vxlan create --remote 198.18.1.105 --id 1091 --link r16-Gi0-0-0-1
 clab tools vxlan create --remote 198.18.1.105 --id 1092 --link r16-Gi0-0-0-2
 clab tools vxlan create --remote 198.18.1.105 --id 1093 --link r16-Gi0-0-0-3
+clab tools vxlan create --remote 198.18.1.105 --id 2093 --link r16-Gi0-0-0-4
 clab tools vxlan create --remote 198.18.1.105 --id 1094 --link r16-Gi0-0-0-5
 clab tools vxlan create --remote 198.18.1.105 --id 1095 --link r16-Gi0-0-0-7
 clab tools vxlan create --remote 198.18.1.105 --id 1096 --link r16-Gi0-0-0-8
@@ -211,10 +212,9 @@ clab tools vxlan create --remote 198.18.1.105 --id 1158 --link r27-Gi0-0-0-6
 clab tools vxlan create --remote 198.18.1.105 --id 1159 --link r27-Gi0-0-0-7
 clab tools vxlan create --remote 198.18.1.105 --id 1160 --link r27-Gi0-0-0-8
 
-# rt07
-clab tools vxlan create --remote 198.18.1.105 --id 1161 --link rt07-Gi0-0-0-1
+# t07
+clab tools vxlan create --remote 198.18.1.105 --id 1161 --link t07-Gi0-0-0-0
 clab tools vxlan create --remote 198.18.1.105 --id 1162 --link t07-Gi0-0-0-3
 clab tools vxlan create --remote 198.18.1.105 --id 1163 --link t07-Gi0-0-0-4
 clab tools vxlan create --remote 198.18.1.105 --id 1164 --link t07-Gi0-0-0-5
-clab tools vxlan create --remote 198.18.1.105 --id 1165 --link t07-Gi0-0-0-7
-clab tools vxlan create --remote 198.18.1.105 --id 1166 --link t07-Gi0-0-0-8
+
