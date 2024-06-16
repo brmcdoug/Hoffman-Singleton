@@ -1,6 +1,8 @@
 #/bin/sh
 
-sudo brctl addbr r28-host
+sudo brctl addbr r28-gi0
+sudo brctl addbr r28-gi1
+sudo brctl addbr r28-gi2
 sudo brctl addbr r29-host
 sudo brctl addbr r30-host
 sudo brctl addbr r31-host
@@ -26,7 +28,9 @@ sudo brctl addbr r49-host
 sudo brctl addbr r50-host
 sudo brctl addbr r51-host
 
-sudo ip link set up r28-host
+sudo ip link set up r28-gi0
+sudo ip link set up r28-gi1
+sudo ip link set up r28-gi2
 sudo ip link set up r29-host
 sudo ip link set up r30-host
 sudo ip link set up r31-host

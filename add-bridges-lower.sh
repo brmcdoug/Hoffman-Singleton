@@ -1,7 +1,10 @@
 #/bin/sh
 
 sudo brctl addbr r00-host
-sudo brctl addbr r01-host
+sudo brctl addbr r01-gi5
+sudo brctl addbr r01-gi6
+sudo brctl addbr r01-gi7
+sudo brctl addbr r01-gi8
 sudo brctl addbr r02-host
 sudo brctl addbr r03-host
 sudo brctl addbr r04-host
@@ -37,7 +40,10 @@ sudo brctl addbr t07-host1
 sudo brctl addbr t07-host2
 
 sudo ip link set up r00-host
-sudo ip link set up r01-host
+sudo ip link set up r01-gi5
+sudo ip link set up r01-gi6
+sudo ip link set up r01-gi7
+sudo ip link set up r01-gi8
 sudo ip link set up r02-host
 sudo ip link set up r03-host
 sudo ip link set up r04-host
