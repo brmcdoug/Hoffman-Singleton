@@ -9,4 +9,4 @@ jupyter notebook
 
 3. The browser will display the jupyter notebook file directory. Open any of the html files; the HS graph should render something like:
 
-[example](screenshots/hs.png)
+[example](hs.png)
